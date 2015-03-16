@@ -41,7 +41,7 @@
 				<li class="dropdown">
 	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Item <span class="caret"></span></a>
 	          		<ul class="dropdown-menu" role="menu">	
-						<li><a href="item.html">Incluir Item</a></li>
+						<li><a href="intem.html">Incluir Item</a></li>
 						<li class="divider"></li>
 			            <li><a href="#">Consultar Item</a></li>
 					</ul>
@@ -109,7 +109,7 @@
 	<div class="jumbotrom">
 		<div class="container">
 
-			<h1>Incluir Distribuidor</h1>
+			<h1>Incluir Item</h1>
 		
 		</div>
 	</div><!--fim jumbotrom-->
@@ -118,18 +118,31 @@
 				<form>
 					<div class="row">
 						<fieldset class="col-md-6">
-							<legend>Dados empresa</legend>
+							<legend>Dados item</legend>
 
 							<div class="form-group">
-								<label for="razao">Razão social</label>
-								<input type="text" class="form-control" id="razao" name="razao" autofocus>	
+								<label for="numero">Número série</label>
+								<input type="text" class="form-control" id="numero" name="numero" autofocus>	
 							</div>
 
 							<div class="form-group">
-								<label for="cnpj"> CNPJ</label>
-								<input type="text" class="form-control" id="cnpj" name="cnpj" 
-										placeholder="00.000.000/0000-00">
+								<label for="titulo">Título</label>
+								<input type="text" class="form-control" id="titulo" name="titulo">
 							</div>
+							
+							<div class="form-group">
+								<label for="data">Data de aquisição</label>
+								<input type="text" class="form-control" id="data" name="data" placeholder="dd/mm/aaaa">
+							</div>
+							
+							<div class="form-group">
+								<label for="tipo">Tipo item</label>
+								<select name="bandeira-carta" id="tipo" class="form-control">
+									<option value="dvd">DVD</option>
+									<option value="fita">Fita</option>
+								</select>
+							</div>
+							
 						</fieldset>	<!--fim fieldset-->
 					</div><!--fim row-->
 					<button type="submit" class="btn btn-default btn-lg pull-left">
