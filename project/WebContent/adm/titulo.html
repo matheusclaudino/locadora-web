@@ -109,7 +109,7 @@
 	<div class="jumbotrom">
 		<div class="container">
 
-			<h1>Incluir Item</h1>
+			<h1>Incluir Título</h1>
 		
 		</div>
 	</div><!--fim jumbotrom-->
@@ -117,29 +117,55 @@
 	<div class="container">
 				<form>
 					<div class="row">
-						<fieldset class="col-md-6">
-							<legend>Dados item</legend>
-
+						<fieldset class="col-md-12">
+							<legend>Dados título</legend>
+						</fieldset><!--fim fieldset-->	
+						<fieldset class="col-sm-6 col-md-6">	
+								<div class="form-group">
+									<label for="nome">Nome</label>
+									<input type="text" class="form-control" id="nome" name="nome" autofocus>	
+								</div>
+								
+								<div class="form-group">
+									<label for="ator">Atores</label>
+									<input type="text" class="form-control" id="ator" name="ator" autofocus>	
+								</div>
+	
+								<div class="form-group">
+									<label for="diretor">Diretor</label>
+									<input type="text" class="form-control" id="diretor" name="diretor">
+								</div>
+								
+								<div class="form-group">
+									<label for="ano">Ano</label>
+									<input type="text" class="form-control" id="ano" name="ano" placeholder="aaaa">
+								</div>
+						</fieldset>	<!--fim fieldset-->
+						<fieldset class="col-sm-6 col-md-6">
+							
+								<div class="form-group">
+									<label for="sinopse">Sinopse</label>
+									<input type="text" class="form-control" id="sinopse" name="sinopse">
+								</div>
+							
 							<div class="form-group">
-								<label for="numero">Número série</label>
-								<input type="text" class="form-control" id="numero" name="numero" autofocus>	
-							</div>
-
-							<div class="form-group">
-								<label for="titulo">Título</label>
-								<input type="text" class="form-control" id="titulo" name="titulo">
+								<label for="categoria">Categoria</label>
+								<input type="text" class="form-control" id="categoria" name="categoria">
 							</div>
 							
 							<div class="form-group">
-								<label for="data">Data de aquisição</label>
-								<input type="text" class="form-control" id="data" name="data" placeholder="dd/mm/aaaa">
+								<label for="classe">Classe</label>
+								<select name="bandeira-carta" id="classe" class="form-control">
+									<option value="cla1">...</option>
+									<option value="cla2">...</option>
+								</select>
 							</div>
 							
 							<div class="form-group">
-								<label for="tipo">Tipo item</label>
-								<select name="bandeira-carta" id="tipo" class="form-control">
-									<option value="dvd">DVD</option>
-									<option value="fita">Fita</option>
+								<label for="distribuidor">Distribuidor</label>
+								<select name="bandeira-carta" id="distribuidor" class="form-control">
+									<option value="dis1">...</option>
+									<option value="dis2">...</option>
 								</select>
 							</div>
 							
