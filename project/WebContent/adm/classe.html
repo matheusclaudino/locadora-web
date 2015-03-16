@@ -4,17 +4,15 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width">
 		<title>Locadora WEB</title>
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
 		<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.js"></script>
-	
+		<script type="text/javascript" src="../js/bootstrap.js"></script>
 	</head>
-	<body>
-	
-		<nav class="navbar navbar-inverse navbar-fixed-top">
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="index.html">LOCADORA WEB</a>
+				<a class="navbar-brand" href="../index.html">LOCADORA WEB</a>
 				<button class="navbar-toggle" type="button"
 	    			data-target=".navbar-collapse" data-toggle="collapse">
 	  				<span class="glyphicon glyphicon-align-justify"></span>
@@ -25,7 +23,7 @@
 				<li class="dropdown">
 	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Classe <span class="caret"></span></a>
 	          		<ul class="dropdown-menu" role="menu">
-						<li><a href="adm/classe.html">Incluir Classe</a></li>
+						<li><a href="#">Incluir Classe</a></li>
 						<li class="divider"></li>
 			            <li><a href="#">Consultar Classe</a></li>
 					</ul>
@@ -106,5 +104,49 @@
 	        	</li><!-- fim dropdown Sócio -->
 			</ul><!-- fim navbar-collapse -->
 		</nav><!--fim navbar-->
-	</body>
+		
+	
+	<div class="jumbotrom">
+		<div class="container">
+
+			<h1>Incluir Classe</h1>
+		
+		</div>
+	</div><!--fim jumbotrom-->
+	
+	<div class="container">
+				<form>
+					<div class="row">
+						<fieldset class="col-md-6">
+							<legend>Dados pessoais</legend>
+
+							<div class="form-group">
+								<label for="nome">Nome completo</label>
+								<input type="text" class="form-control" id="nome" name="nome" autofocus>	
+							</div>
+
+							<div class="form-group">
+								<label for="valor-locacao"> Valor locação</label>
+								
+								<div class="input-group">
+									<span class="input-group-addon">R$</span>
+									<input type="email" class="form-control" id="valor-locacao" name="valor-locacao" 
+										placeholder="000,00">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="prazo">Prazo devolção</label>
+								<input type="text" class="form-control" id="prazo" name="prazo" 
+									placeholder="dias">
+							</div>
+						</fieldset>	<!--fim fieldset-->
+					</div><!--fim row-->
+					<button type="submit" class="btn btn-default btn-lg pull-left">
+						<span class="glyphicon glyphicon-floppy-disk"></span>
+						Salvar
+					</button>
+				</form><!--fim form-->
+		</div><!--fim container-->
+</body>
 </html>
