@@ -63,7 +63,13 @@
 					Efetuar Pagamento
 				</button>
 			</a>
+			
+			<a href="../index">
+				<button type="button" class="btn btn-default btn-lg pull-left">
+					<span class="glyphicon glyphicon-remove"></span>
+					Cancelar
+				</button>
+			</a>
 		</form>
-
 </body>
 </html>

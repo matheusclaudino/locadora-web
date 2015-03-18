@@ -32,6 +32,12 @@
 						<span class="glyphicon glyphicon-floppy-disk"></span>
 						Salvar
 					</button>
+					<a href="../index.jsp">
+						<button type="button" class="btn btn-default btn-lg pull-left">
+							<span class="glyphicon glyphicon-remove"></span>
+							Cancelar
+						</button>
+					</a>
 				</form><!--fim form-->
 		</div><!--fim container-->
 </body>

@@ -4,3 +4,10 @@
 
 body { padding-top: 70px; }
 
+.btn{
+	margin-right: 20px;
+}
+
+legend{
+	margin-top: 20px;
+}

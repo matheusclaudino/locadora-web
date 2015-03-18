@@ -57,6 +57,12 @@
 					</div>
 				</fieldset>
 			</div><!-- fim row -->
+			
+			<div class="row">
+				<fieldset class="col-md-12">
+					<legend>Dados dependente</legend>
+				</fieldset>
+			</div>
 			<button type="submit" class="btn btn-default btn-lg pull-left">
 				<span class="glyphicon glyphicon-floppy-disk"></span>
 				Salvar
