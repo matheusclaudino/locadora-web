@@ -9,7 +9,7 @@
 				<ul class="nav navbar-nav collapse navbar-collapse">
 				
 				<li class="dropdown">
-	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Classe <span class="caret"></span></a>
+	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="fa fa-list-ol"></span> Classe <span class="caret"></span></a>
 	          		<ul class="dropdown-menu" role="menu">
 						<li><a href="classe.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Classe</a></li>
 						<li class="divider"></li>
@@ -18,7 +18,7 @@
 				</li><!-- fim dropdown Classe -->
 				
 				<li class="dropdown">
-	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Distribuidor <span class="caret"></span></a>
+	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="fa fa-truck"></span> Distribuidor <span class="caret"></span></a>
 	          		<ul class="dropdown-menu" role="menu">	
 						<li><a href="distribuidor.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Distribuidor</a></li>
 						<li class="divider"></li>
@@ -27,7 +27,7 @@
 				</li><!-- fim dropdown Distribuidor -->
 					
 				<li class="dropdown">
-	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Item <span class="caret"></span></a>
+	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="fa fa-video-camera"></span> Item <span class="caret"></span></a>
 	          		<ul class="dropdown-menu" role="menu">	
 						<li><a href="item.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Item</a></li>
 						<li class="divider"></li>
@@ -36,7 +36,7 @@
 				</li><!-- fim dropdown Item -->
 				
 				<li class="dropdown">
-	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Título <span class="caret"></span></a>
+	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="fa fa-film"></span> Título <span class="caret"></span></a>
 	          		<ul class="dropdown-menu" role="menu">
 						<li><a href="titulo.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Título</a></li>
 						<li class="divider"></li>
@@ -45,7 +45,7 @@
 				</li><!-- fim dropdown Título -->
 				
 				<li class="dropdown">
-	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Devolução <span class="caret"></span></a>
+	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="fa fa-unlock"></span> Devolução <span class="caret"></span></a>
 	          		<ul class="dropdown-menu" role="menu">
 						<li><a href="devolucao.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Devolução</a></li>
 						<li class="divider"></li>
@@ -54,7 +54,7 @@
 				</li><!-- fim dropdown Devolução -->
 				
 				<li class="dropdown">
-	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Locação <span class="caret"></span></a>
+	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="fa fa-unlock-alt"></span> Locação <span class="caret"></span></a>
 	          		<ul class="dropdown-menu" role="menu">
 						<li><a href="locacao.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Locação</a></li>
 						<li class="divider"></li>
@@ -62,10 +62,10 @@
 					</ul>
 				</li><!-- fim dropdown Locação -->	
 				
-				<li><a href="pagamento.jsp">Efetuar Pagamento</a></li>	
+				<li><a href="pagamento.jsp"><span class="fa fa-usd"></span> Efetuar Pagamento</a></li>	
 				
 				<li class="dropdown">
-	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Reserva <span class="caret"></span></a>
+	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="fa fa-check-square-o"></span> Reserva <span class="caret"></span></a>
 	          		<ul class="dropdown-menu" role="menu">
 						<li><a href="reserva.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Reserva</a></li>
 					 	<li class="divider"></li>
@@ -74,7 +74,7 @@
 				</li><!-- fim dropdown Reserva -->
 				
 				<li class="dropdown">
-	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Sócio <span class="caret"></span></a>
+	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="fa fa-users"></span> Sócio <span class="caret"></span></a>
 	          		<ul class="dropdown-menu" role="menu">
 			            <li><a href="socio.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Sócio</a></li>
 			            <li class="divider"></li>
@@ -82,7 +82,7 @@
 	         		</ul>
 	        	</li><!-- fim dropdown Sócio -->
 	        	
-	        	<li><a href="#">Consultar Título</a></li>
+	        	<li><a href="#"><span class="fa fa-search"></span> Consultar Título</a></li>
 	        	
 			</ul><!-- fim navbar-collapse -->
 		</nav><!--fim navbar-->

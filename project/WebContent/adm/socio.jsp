@@ -5,7 +5,7 @@
 	<div class="jumbotrom">
 		<div class="container">
 
-			<h1>Incluir Sócio</h1>
+			<h1><span class="fa fa-users"></span> Incluir Sócio</h1>
 		
 		</div>
 	</div><!--fim jumbotrom-->

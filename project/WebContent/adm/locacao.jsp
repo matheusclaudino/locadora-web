@@ -5,7 +5,7 @@
 	<div class="jumbotrom">
 		<div class="container">
 
-			<h1>Incluir Locação</h1>
+			<h1><span class="fa fa-unlock-alt"></span> Incluir Locação</h1>
 		
 		</div>
 	</div><!--fim jumbotrom-->
@@ -19,7 +19,7 @@
 				
 				<fieldset class="col-sm-6 col-md-6">
 					<div class="form-group">
-						<label for="numero">Número incrição</label>
+						<label for="numero">Número inscrição</label>
 						<input type="text" id="numero" name="numero" class="form-control">
 					</div>
 					

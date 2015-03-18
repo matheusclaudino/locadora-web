@@ -5,7 +5,7 @@
 	<div class="jumbotrom">
 		<div class="container">
 
-			<h1>Incluir Distribuidor</h1>
+			<h1><span class="fa fa-truck"></span> Incluir Distribuidor</h1>
 		
 		</div>
 	</div><!--fim jumbotrom-->

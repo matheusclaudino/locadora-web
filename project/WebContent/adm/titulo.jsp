@@ -5,7 +5,7 @@
 	<div class="jumbotrom">
 		<div class="container">
 
-			<h1>Incluir Título</h1>
+			<h1><span class="fa fa-film"></span> Incluir Título</h1>
 		
 		</div>
 	</div><!--fim jumbotrom-->

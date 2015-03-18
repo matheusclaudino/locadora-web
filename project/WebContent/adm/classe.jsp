@@ -5,7 +5,7 @@
 	<div class="jumbotrom">
 		<div class="container">
 
-			<h1>Incluir Classe</h1>
+			<h1><span class="fa fa-list-ol"></span> Incluir Classe</h1>
 		
 		</div>
 	</div><!--fim jumbotrom-->

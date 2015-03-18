@@ -7,6 +7,7 @@
 		<meta name="viewport" content="width=device-width">
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>Locadora WEB</title>
+		<link rel="stylesheet" type="text/css" href="../css/font-awesome.css">	
 		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
 		<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>

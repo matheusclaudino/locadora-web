@@ -5,7 +5,7 @@
 	<div class="jumbotrom">
 		<div class="container">
 
-			<h1>Efetuar Pagamento</h1>
+			<h1><span class="fa fa-usd"></span> Efetuar Pagamento</h1>
 		
 		</div>
 	</div><!--fim jumbotrom-->
