@@ -69,8 +69,8 @@
 					</div>
 					
 					<div class="form-group">
-						<label for="sexo">Sexo</label>
-						<select id="sexo" name="sexo" class="form-control">
+						<label for="sexo-dependente">Sexo</label>
+						<select id="sexo-dependente" name="sexo-dependente" class="form-control">
 							<option value="f">Feminino</option>
 							<option value="m">Masculino</option>
 						</select>

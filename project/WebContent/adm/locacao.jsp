@@ -35,15 +35,14 @@
 							<option value="fita">Fita</option>
 						</select>
 					</div>
-					
+				</fieldset>	
+				<fieldset class="col-sm-6 col-md-6">
 					<div class="form-group">
 						<label for="valor">Valor da locação</label>
-						
 						<div class="input-group">
 							<span class="input-group-addon">R$</span>
 							<input type="text" id="valor" name="valor" class="form-control" placeholder="000,00">
 						</div>
-						
 					</div>
 					
 					<div class="form-group">

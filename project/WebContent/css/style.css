@@ -2,6 +2,21 @@
 
 .navbar .glyphicon {color: grey;}
 
+.navbar-inverse .navbar-nav > li > a{
+	color: white;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover{
+	color: grey;
+}
+
+.navbar-inverse .navbar-brand{
+	color: white;
+}
+.navbar-inverse .navbar-brand:hover {
+	color:grey;
+}	
+
 .navbar-inverse{
 	padding-top: 0px;
 	padding-bottom: 0px;
