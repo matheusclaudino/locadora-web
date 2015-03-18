@@ -99,5 +99,7 @@
 	        	</li><!-- fim dropdown Sócio -->
 	        	
 	        	<li><a href="#">Consultar Título</a></li>
+	        	</ul>
+	        </nav><!-- fim navbar -->
 </body>
 </html>

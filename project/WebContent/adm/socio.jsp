@@ -73,6 +73,7 @@
 					<span class="glyphicon glyphicon-remove"></span>
 					Cancelar
 				</button>
+			</a>
 		</form>
 	</div><!-- fim container -->
 
