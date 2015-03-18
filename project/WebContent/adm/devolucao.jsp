@@ -13,9 +13,10 @@
 	<div class="container">
 				<form>
 					<div class="row">
-						<fieldset class="col-sm-6 col-md-6">
+						<fieldset class="col-md-12">
 							<legend>Dados devolução</legend>
-							
+						</fieldset>
+						<fieldset class="col-sm-6 col-md-6">
 							<div class="form-group">
 								<label for="numero">Número série</label>
 								<input type="text" class="form-control" id="numero" name="numero" autofocus placeholder="Buscar">
@@ -30,7 +31,8 @@
 								<label for="locacao">Locação</label>
 								<input type="text" class="form-control" id="locacao" name="locacao">
 							</div>
-							
+						</fieldset><!-- fim fieldset -->
+						<fieldset class="col-sm-6 col-md-6">
 							<div class="form-group">
 								<label for="valor"> Valor</label>
 								
