@@ -13,7 +13,6 @@
 		<script type="text/javascript" src="js/bootstrap.js"></script>	
 </head>
 <body>
-	
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="index.jsp">LOCADORA WEB</a>
@@ -29,77 +28,79 @@
 	          		<ul class="dropdown-menu" role="menu">
 						<li><a href="adm/classe.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Classe</a></li>
 						<li class="divider"></li>
-			            <li><a href="#">Consultar Classe</a></li>
+			            <li><a href="#"><span class="glyphicon glyphicon-search"></span> Consultar Classe</a></li>
 					</ul>
 				</li><!-- fim dropdown Classe -->
 				
 				<li class="dropdown">
 	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Distribuidor <span class="caret"></span></a>
 	          		<ul class="dropdown-menu" role="menu">	
-						<li><a href="adm/distribuidor.jsp">Incluir Distribuidor</a></li>
+						<li><a href="adm/distribuidor.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Distribuidor</a></li>
 						<li class="divider"></li>
-			            <li><a href="#">Consultar Distribuidor</a></li>
+			            <li><a href="#"><span class="glyphicon glyphicon-search"></span> Consultar Distribuidor</a></li>
 					</ul>
 				</li><!-- fim dropdown Distribuidor -->
 					
 				<li class="dropdown">
 	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Item <span class="caret"></span></a>
 	          		<ul class="dropdown-menu" role="menu">	
-						<li><a href="adm/item.jsp">Incluir Item</a></li>
+						<li><a href="adm/item.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Item</a></li>
 						<li class="divider"></li>
-			            <li><a href="#">Consultar Item</a></li>
+			            <li><a href="#"><span class="glyphicon glyphicon-search"></span> Consultar Item</a></li>
 					</ul>
 				</li><!-- fim dropdown Item -->
 				
 				<li class="dropdown">
 	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Título <span class="caret"></span></a>
 	          		<ul class="dropdown-menu" role="menu">
-						<li><a href="adm/titulo.jsp">Incluir Título</a></li>
+						<li><a href="adm/titulo.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Título</a></li>
 						<li class="divider"></li>
-			            <li><a href="#">Consultar Título</a></li>
+			            <li><a href="#"><span class="glyphicon glyphicon-search"></span> Consultar Título</a></li>
 					</ul>
 				</li><!-- fim dropdown Título -->
 				
 				<li class="dropdown">
 	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Devolução <span class="caret"></span></a>
 	          		<ul class="dropdown-menu" role="menu">
-						<li><a href="adm/devolucao.jsp">Incluir Devolução</a></li>
+						<li><a href="adm/devolucao.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Devolução</a></li>
 						<li class="divider"></li>
-			            <li><a href="#">Consultar Devolução</a></li>
+			            <li><a href="#"><span class="glyphicon glyphicon-search"></span> Consultar Devolução</a></li>
 					</ul>
 				</li><!-- fim dropdown Devolução -->
 				
 				<li class="dropdown">
 	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Locação <span class="caret"></span></a>
 	          		<ul class="dropdown-menu" role="menu">
-						<li><a href="adm/locacao.jsp">Incluir Locação</a></li>
+						<li><a href="adm/locacao.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Locação</a></li>
 						<li class="divider"></li>
-			            <li><a href="#">Consultar Locação</a></li>
+			            <li><a href="#"><span class="glyphicon glyphicon-search"></span> Consultar Locação</a></li>
 					</ul>
 				</li><!-- fim dropdown Locação -->	
 				
-				<li><a href="adm/pagamento.jsp">Efetuar Pagamento</a></li>
+				<li><a href="adm/pagamento.jsp">Efetuar Pagamento</a></li>	
 				
 				<li class="dropdown">
 	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Reserva <span class="caret"></span></a>
 	          		<ul class="dropdown-menu" role="menu">
-						<li><a href="adm/reserva.jsp">Incluir Reserva</a></li>
+						<li><a href="adm/reserva.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Reserva</a></li>
 					 	<li class="divider"></li>
-			            <li><a href="#">Consultar Reserva</a></li>
+			            <li><a href="#"><span class="glyphicon glyphicon-search"></span> Consultar Reserva</a></li>
 					</ul>
 				</li><!-- fim dropdown Reserva -->
 				
 				<li class="dropdown">
 	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Sócio <span class="caret"></span></a>
 	          		<ul class="dropdown-menu" role="menu">
-			            <li><a href="adm/socio.jsp">Incluir Sócio</a></li>
+			            <li><a href="adm/socio.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Sócio</a></li>
 			            <li class="divider"></li>
-			            <li><a href="#">Consultar Sócio</a></li>
+			            <li><a href="#"><span class="glyphicon glyphicon-search"></span> Consultar Sócio</a></li>
 	         		</ul>
 	        	</li><!-- fim dropdown Sócio -->
 	        	
 	        	<li><a href="#">Consultar Título</a></li>
-	        	</ul>
-	        </nav><!-- fim navbar -->
+	        	
+			</ul><!-- fim navbar-collapse -->
+		</nav><!--fim navbar-->
+		
 </body>
 </html>
