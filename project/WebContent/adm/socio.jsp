@@ -62,6 +62,25 @@
 				<fieldset class="col-md-12">
 					<legend>Dados dependente</legend>
 				</fieldset>
+				<fieldset class="col-sm-6 col-md-6">
+					<div class="form-group">
+						<label for="nome-dependente">Nome dependente</label>
+						<input type="text" id="nome-dependente" name="nome-dependente" class="form-control">
+					</div>
+					
+					<div class="form-group">
+						<label for="sexo">Sexo</label>
+						<select id="sexo" name="sexo" class="form-control">
+							<option value="f">Feminino</option>
+							<option value="m">Masculino</option>
+						</select>
+					</div>
+					
+					<div class="form-group">
+						<label for="data-dependente">Data nascimento</label>
+						<input type="date" id="data-dependente" name="data-dependente" class="form-control" placeholder="dd/mm/aaaa">
+					</div>
+				</fieldset>
 			</div>
 			<button type="submit" class="btn btn-default btn-lg pull-left">
 				<span class="glyphicon glyphicon-floppy-disk"></span>
