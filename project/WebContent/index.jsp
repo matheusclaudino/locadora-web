@@ -10,12 +10,13 @@
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.js"></script>	
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">	
 </head>
 <body>
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="index.jsp">LOCADORA WEB</a>
+				<a class="navbar-brand" href="index.jsp">LOCADORA WEB <span class="fa fa-diamond"></span></a>
 				<button class="navbar-toggle" type="button"
 	    			data-target=".navbar-collapse" data-toggle="collapse">
 	  				<span class="glyphicon glyphicon-align-justify"></span>
