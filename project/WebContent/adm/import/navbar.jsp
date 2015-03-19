@@ -13,7 +13,7 @@
 	          		<ul class="dropdown-menu" role="menu">
 						<li><a href="classe.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Classe</a></li>
 						<li class="divider"></li>
-			            <li><a href="#"><span class="glyphicon glyphicon-search"></span> Consultar Classe</a></li>
+			            <li><a href="consultarClasse.jsp"><span class="glyphicon glyphicon-search"></span> Consultar Classe</a></li>
 					</ul>
 				</li><!-- fim dropdown Classe -->
 				
@@ -22,7 +22,7 @@
 	          		<ul class="dropdown-menu" role="menu">	
 						<li><a href="distribuidor.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Distribuidor</a></li>
 						<li class="divider"></li>
-			            <li><a href="#"><span class="glyphicon glyphicon-search"></span> Consultar Distribuidor</a></li>
+			            <li><a href="consultarDistribuirdor.jsp"><span class="glyphicon glyphicon-search"></span> Consultar Distribuidor</a></li>
 					</ul>
 				</li><!-- fim dropdown Distribuidor -->
 					
@@ -31,7 +31,7 @@
 	          		<ul class="dropdown-menu" role="menu">	
 						<li><a href="item.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Item</a></li>
 						<li class="divider"></li>
-			            <li><a href="#"><span class="glyphicon glyphicon-search"></span> Consultar Item</a></li>
+			            <li><a href="consultarItem.jsp"><span class="glyphicon glyphicon-search"></span> Consultar Item</a></li>
 					</ul>
 				</li><!-- fim dropdown Item -->
 				
@@ -40,7 +40,7 @@
 	          		<ul class="dropdown-menu" role="menu">
 						<li><a href="titulo.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Título</a></li>
 						<li class="divider"></li>
-			            <li><a href="#"><span class="glyphicon glyphicon-search"></span> Consultar Título</a></li>
+			            <li><a href="consultarTitulo.jsp"><span class="glyphicon glyphicon-search"></span> Consultar Título</a></li>
 					</ul>
 				</li><!-- fim dropdown Título -->
 				
@@ -49,7 +49,7 @@
 	          		<ul class="dropdown-menu" role="menu">
 						<li><a href="devolucao.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Devolução</a></li>
 						<li class="divider"></li>
-			            <li><a href="#"><span class="glyphicon glyphicon-search"></span> Consultar Devolução</a></li>
+			            <li><a href="consultarDevolucao.jsp"><span class="glyphicon glyphicon-search"></span> Consultar Devolução</a></li>
 					</ul>
 				</li><!-- fim dropdown Devolução -->
 				
@@ -58,7 +58,7 @@
 	          		<ul class="dropdown-menu" role="menu">
 						<li><a href="locacao.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Locação</a></li>
 						<li class="divider"></li>
-			            <li><a href="#"><span class="glyphicon glyphicon-search"></span> Consultar Locação</a></li>
+			            <li><a href="consultarLocacao.jsp"><span class="glyphicon glyphicon-search"></span> Consultar Locação</a></li>
 					</ul>
 				</li><!-- fim dropdown Locação -->	
 				
@@ -69,7 +69,7 @@
 	          		<ul class="dropdown-menu" role="menu">
 						<li><a href="reserva.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Reserva</a></li>
 					 	<li class="divider"></li>
-			            <li><a href="#"><span class="glyphicon glyphicon-search"></span> Consultar Reserva</a></li>
+			            <li><a href="consultarReserva.jsp"><span class="glyphicon glyphicon-search"></span> Consultar Reserva</a></li>
 					</ul>
 				</li><!-- fim dropdown Reserva -->
 				
@@ -78,7 +78,7 @@
 	          		<ul class="dropdown-menu" role="menu">
 			            <li><a href="socio.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Sócio</a></li>
 			            <li class="divider"></li>
-			            <li><a href="#"><span class="glyphicon glyphicon-search"></span> Consultar Sócio</a></li>
+			            <li><a href="consultarSocio.jsp"><span class="glyphicon glyphicon-search"></span> Consultar Sócio</a></li>
 	         		</ul>
 	        	</li><!-- fim dropdown Sócio -->
 	        	
