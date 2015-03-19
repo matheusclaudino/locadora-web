@@ -63,7 +63,7 @@
 				</button>
 			</a>
 			
-			<a href="../index">
+			<a href="../index.jsp">
 				<button type="button" class="btn btn-default btn-lg pull-left">
 					<span class="glyphicon glyphicon-remove"></span>
 					Cancelar

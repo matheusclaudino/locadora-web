@@ -14,7 +14,7 @@
 				<form>
 					<div class="row">
 						<fieldset class="col-md-12">
-							<legend>Dados pessoais</legend>
+							<legend>Dados classe</legend>
 						</fieldset>
 						
 						<fieldset class="col-md-6">
