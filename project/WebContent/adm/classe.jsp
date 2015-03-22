@@ -11,7 +11,7 @@
 	</div><!--fim jumbotrom-->
 	
 	<div class="container">
-				<form>
+				<form action="../servletClasse" method="POST">
 					<div class="row">
 						<fieldset class="col-md-12">
 							<legend>Dados classe</legend>
@@ -28,7 +28,7 @@
 								
 								<div class="input-group">
 									<span class="input-group-addon">R$</span>
-									<input type="email" class="form-control" id="valor-locacao" name="valor-locacao" 
+									<input type="text" class="form-control" id="valor-locacao" name="valor-locacao" 
 										placeholder="000,00">
 								</div>
 							</div>
