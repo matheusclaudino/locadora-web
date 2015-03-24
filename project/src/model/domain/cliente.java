@@ -1,10 +1,18 @@
 package model.domain;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 public class cliente {
+	
+	@Id
+	@GeneratedValue
 	private int numero_inscricao;
+	@Column(nullable = false)
 	private String nome;
 	private String data_nascimento;
-	private String sexo;
+	private char sexo;
 	private Boolean ativo;
 	
 	public cliente() {
