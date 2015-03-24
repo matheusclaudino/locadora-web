@@ -37,10 +37,10 @@ public class cliente {
 	public void setData_nascimento(String data_nascimento) {
 		this.data_nascimento = data_nascimento;
 	}
-	public String getSexo() {
+	public char getSexo() {
 		return sexo;
 	}
-	public void setSexo(String sexo) {
+	public void setSexo(char sexo) {
 		this.sexo = sexo;
 	}
 	public Boolean getAtivo() {
