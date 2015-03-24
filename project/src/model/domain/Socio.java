@@ -4,14 +4,14 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 
 @Entity
-public class socio extends cliente {
+public class Socio extends Cliente {
 	
 	@Column(nullable = false)
 	private String cpf;
 	private String endereco;
 	private String telefone;
 	
-	public socio() {
+	public Socio() {
 		super();
 	}
 	

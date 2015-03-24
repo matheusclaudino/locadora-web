@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class cliente {
+public class Cliente {
 	
 	@Id
 	@GeneratedValue
@@ -17,7 +17,7 @@ public class cliente {
 	private char sexo;
 	private Boolean ativo;
 	
-	public cliente() {
+	public Cliente() {
 		super();
 	}
 	
