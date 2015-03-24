@@ -22,7 +22,6 @@
 	padding-bottom: 0px;
 }
 
-
 body { padding-top: 70px; }
 
 .btn{
@@ -30,7 +29,22 @@ body { padding-top: 70px; }
 	margin-bottom: 20px;
 }
 
-
 legend{
 	margin-top: 20px;
 }
+
+table tr td .btn{
+	margin-bottom:0px;
+	margin-right: 0px;
+}
+
+table tr th{
+	background-color: #222222;
+	color: white;
+}
+
+.table-striped{
+	text-align: center;
+	background-color: #d0d0d0;
+}
+
