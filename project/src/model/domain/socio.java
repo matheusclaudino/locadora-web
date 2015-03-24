@@ -1,6 +1,12 @@
 package model.domain;
 
-public class socio {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+@Entity
+public class socio extends cliente {
+	
+	@Column(nullable = false)
 	private String cpf;
 	private String endereco;
 	private String telefone;
