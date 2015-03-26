@@ -15,6 +15,18 @@ public class Socio extends Cliente {
 		super();
 	}
 	
+	
+	
+	public Socio(String nome, String data_nascimento,
+			char sexo, Boolean ativo, String cpf, String endereco, String telefone) {
+		super(nome, data_nascimento, sexo, ativo);
+		this.cpf = cpf;
+		this.endereco = endereco;
+		this.telefone = telefone;
+	}
+
+
+
 	public String getCpf() {
 		return cpf;
 	}
