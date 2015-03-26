@@ -95,6 +95,44 @@
 			</a>
 		</form>
 	</div><!-- fim container -->
-
+	
+	<div class="container">
+		<form action="">
+			<div class="row">
+				<fieldset class="col-sm-12 col-md-12">
+					<legend>Dados da dependente</legend>
+				</fieldset>
+				
+					<table class="table table-striped table-bordered" >
+						<tr>
+							<th>NOME</th>
+							<th>SEXO</th>
+							<th>DATA NASCIMENTO</th>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td><span class="btn btn-primary glyphicon glyphicon-refresh"></span></td>
+							<td><span class="btn btn-danger glyphicon glyphicon-trash"></span></td>	
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td><span class="btn btn-primary glyphicon glyphicon-refresh"></span></td>
+							<td><span class="btn btn-danger glyphicon glyphicon-trash"></span></td>	
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td><span class="btn btn-primary glyphicon glyphicon-refresh"></span></td>
+							<td><span class="btn btn-danger glyphicon glyphicon-trash"></span></td>	
+						</tr>
+					</table>
+			</div><!-- fim row -->
+		</form>
+	</div><!-- fim container -->
 </body>
 </html>
