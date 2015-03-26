@@ -21,6 +21,19 @@ public class Cliente {
 		super();
 	}
 	
+	
+	
+	public Cliente(String nome, String data_nascimento,
+			char sexo, Boolean ativo) {
+		super();
+		this.nome = nome;
+		this.data_nascimento = data_nascimento;
+		this.sexo = sexo;
+		this.ativo = ativo;
+	}
+
+
+
 	public int getNumero_inscricao() {
 		return numero_inscricao;
 	}
