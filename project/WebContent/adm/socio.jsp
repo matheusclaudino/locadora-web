@@ -18,6 +18,7 @@
 				</fieldset>
 				
 				<fieldset class="col-sm-6 col-md-6">
+					<input type="hidden" name="inscreverNovoSocio"></input>
 					
 					<div class="form-group">
 						<label for="nome">Nome</label>
@@ -81,33 +82,14 @@
 						<input type="date" id="data-dependente" name="data-dependente" class="form-control" placeholder="dd/mm/aaaa">
 					</div>
 				</fieldset>
-			</div>
-			<button type="submit" class="btn btn-default btn-lg pull-left">
-				<span class="glyphicon glyphicon-floppy-disk"></span>
-				Salvar
-			</button>
-			
-			<a href="../index.jsp">
-				<button type="button" class="btn btn-default btn-lg pull-left">
-					<span class="glyphicon glyphicon-remove"></span>
-					Cancelar
-				</button>
-			</a>
-		</form>
-	</div><!-- fim container -->
-	
-	<div class="container">
-		<form action="">
-			<div class="row">
-				<fieldset class="col-sm-12 col-md-12">
-					<legend>Dados da dependente</legend>
-				</fieldset>
-				
-					<table class="table table-striped table-bordered col-sm-6 col-md-6" >
+				<fieldset class="col-sm-6 col-md-6">
+					<table class="table table-striped table-bordered " >
 						<tr>
 							<th>NOME</th>
 							<th>SEXO</th>
 							<th>DATA NASCIMENTO</th>
+							<th>ALTERAR</th>
+							<th>EXCLUIR</th>
 						</tr>
 						<tr>
 							<td></td>
@@ -131,8 +113,22 @@
 							<td><span class="btn btn-danger glyphicon glyphicon-trash"></span></td>	
 						</tr>
 					</table>
+				
+				</fieldset>
 			</div><!-- fim row -->
+			<button type="submit" class="btn btn-default btn-lg pull-left">
+				<span class="glyphicon glyphicon-floppy-disk"></span>
+				Salvar
+			</button>
+			
+			<a href="../index.jsp">
+				<button type="button" class="btn btn-default btn-lg pull-left">
+					<span class="glyphicon glyphicon-remove"></span>
+					Cancelar
+				</button>
+			</a>			
 		</form>
 	</div><!-- fim container -->
+
 </body>
 </html>
