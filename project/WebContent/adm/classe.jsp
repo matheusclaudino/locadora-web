@@ -11,7 +11,7 @@
 	</div><!--fim jumbotrom-->
 	
 	<div class="container">
-				<form action="../servletClasse" method="POST">
+				<form action="../ctrlCadastrarClasse" method="POST">
 					<div class="row">
 						<fieldset class="col-md-12">
 							<legend>Dados classe</legend>
