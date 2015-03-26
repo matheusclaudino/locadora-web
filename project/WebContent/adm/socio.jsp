@@ -11,7 +11,7 @@
 	</div><!--fim jumbotrom-->
 	
 	<div class="container">
-		<form action="../ctrlCadastrarCliente">
+		<form action="../ctrlCadastrarCliente" method="POST">
 			<div class="row">
 				<fieldset class="col-md-12">
 					<legend>Dados sócio</legend>
