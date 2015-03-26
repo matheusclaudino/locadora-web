@@ -1,6 +1,8 @@
 package controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -33,7 +35,33 @@ public class ctrlCadastrarCliente extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
+		String operacao =  request.getParameter("operacao");
+		PrintWriter out = response.getWriter();
+		
+		if(operacao.equals("inscreverNovoSocio")){
+			String nome = request.getParameter("nome");
+			String endereco = request.getParameter("cpf");
+			String telefone = request.getParameter("telefone");
+			char sexo = request.getParameter("sexo").charAt(0);
+			String cpf = request.getParameter("cpf");
+			String data = request.getParameter("data-nascimento");
+		
+		
+		out.println("<html>"
+					+ "<head>Cadastrar Cliente</head>"
+					+ "<body>"
+						+ "Nome: " + nome
+						+ "Endereço: " + endereco
+						+ "Telefone: " + telefone
+						+ "Sexo: " + sexo
+						+ "CPF: " + cpf
+						+ "Data: " + data
+					+ "</body>"
+				+ "</html>");
+		}
+		
+		
 	}
 
 }
