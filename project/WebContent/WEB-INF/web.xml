@@ -9,12 +9,22 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
   <servlet>
     <servlet-name>cadClasse</servlet-name>
-    <servlet-class>servlet.servletClasse</servlet-class>
+    <servlet-class>controller.servletClasse</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>cadClasse</servlet-name>
     <url-pattern>/classe</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+      <servlet-name>cadCliente</servlet-name>
+      <servlet-class>controller.ctrlCadastrarCliente</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>cadCliente</servlet-name>
+      <url-pattern></url-pattern>
   </servlet-mapping>
 </web-app>
