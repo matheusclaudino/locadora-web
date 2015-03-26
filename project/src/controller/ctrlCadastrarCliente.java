@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class ctrlCadastrarCliente
  */
-@WebServlet("/ctrlCadastrarCliente")
+@WebServlet("../ctrlCadastrarCliente")
 public class ctrlCadastrarCliente extends HttpServlet {
 	private static final long serialVersionUID = 8542024816932636910L;
 
