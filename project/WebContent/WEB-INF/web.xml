@@ -12,7 +12,7 @@
   
   <servlet>
     <servlet-name>cadClasse</servlet-name>
-    <servlet-class>controller.servletClasse</servlet-class>
+    <servlet-class>controller.ctrlCadastrarCadastrarClasse</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>cadClasse</servlet-name>
@@ -25,6 +25,6 @@
   </servlet>
   <servlet-mapping>
       <servlet-name>cadCliente</servlet-name>
-      <url-pattern></url-pattern>
+      <url-pattern>/cliente</url-pattern>
   </servlet-mapping>
 </web-app>

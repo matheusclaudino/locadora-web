@@ -103,7 +103,7 @@
 					<legend>Dados da dependente</legend>
 				</fieldset>
 				
-					<table class="table table-striped table-bordered" >
+					<table class="table table-striped table-bordered col-sm-6 col-md-6" >
 						<tr>
 							<th>NOME</th>
 							<th>SEXO</th>
