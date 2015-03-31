@@ -83,21 +83,21 @@
 					<input type="hidden" name="operacao" value="inscreverNovoDependente">
 				
 					<div class="form-group">
-						<label for="nome-dependente">Nome dependente</label>
-						<input type="text" id="nome-dependente" name="nome-dependente" class="form-control">
+						<label for="nome">Nome dependente</label>
+						<input type="text" id="nome" name="nome" class="form-control">
 					</div>
 					
 					<div class="form-group">
-						<label for="sexo-dependente">Sexo</label>
-						<select id="sexo-dependente" name="sexo-dependente" class="form-control">
+						<label for="sexo">Sexo</label>
+						<select id="sexo" name="sexo" class="form-control">
 							<option value="f">Feminino</option>
 							<option value="m">Masculino</option>
 						</select>
 					</div>
 					
 					<div class="form-group">
-						<label for="data-dependente">Data nascimento</label>
-						<input type="date" id="data-dependente" name="data-dependente" class="form-control" placeholder="dd/mm/aaaa">
+						<label for="data">Data nascimento</label>
+						<input type="date" id="data" name="data" class="form-control" placeholder="dd/mm/aaaa">
 					</div>
 				</fieldset>
 				<fieldset class="col-sm-6 col-md-6">

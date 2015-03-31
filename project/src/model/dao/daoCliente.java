@@ -29,5 +29,13 @@ public class daoCliente {
 		
 		return INSCREVER_NOVO_SOCIO_OK;
 	}
+	
+	public static int inscreverNovoDependente(String nome, char sexo, String data){
+		if(nome.equals(""))
+			return INSCREVER_NOVO_SOCIO_ERRO;
+		
+		
+		return INSCREVER_NOVO_SOCIO_OK;
+	}
 
 }

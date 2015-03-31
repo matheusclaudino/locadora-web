@@ -63,6 +63,20 @@ public class ctrlCadastrarCliente extends HttpServlet {
 					+ "</body>"
 				+ "</html>");*/
 		}
+		else if(operacao.equals("inscreverNovoDependente")){
+			String nome = request.getParameter("nome");
+			char sexo = request.getParameter("sexo").charAt(0);
+			String data = request.getParameter("data");
+			
+			out.println("<html>"
+					+ "<head>Cadastrar Cliente</head>"
+					+ "<body>"
+						+ "Nome: " + nome
+						+ "Sexo: " + sexo
+						+ "Data: " + data
+					+ "</body>"
+				+ "</html>");
+		}
 		
 		
 	}
