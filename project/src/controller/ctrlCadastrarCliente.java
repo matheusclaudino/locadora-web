@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.dao.daoCliente;
+
 /**
  * Servlet implementation class ctrlCadastrarCliente
  */
@@ -41,14 +43,15 @@ public class ctrlCadastrarCliente extends HttpServlet {
 		
 		if(operacao.equals("inscreverNovoSocio")){
 			String nome = request.getParameter("nome");
-			String endereco = request.getParameter("cpf");
+			String endereco = request.getParameter("endereco");
 			String telefone = request.getParameter("telefone");
 			char sexo = request.getParameter("sexo").charAt(0);
 			String cpf = request.getParameter("cpf");
 			String data = request.getParameter("data-nascimento");
 		
+			daoCliente.inscreverNovoSocio(nome, endereco, telefone, sexo, cpf, data);
 		
-		out.println("<html>"
+		/*out.println("<html>"
 					+ "<head>Cadastrar Cliente</head>"
 					+ "<body>"
 						+ "Nome: " + nome
@@ -58,7 +61,7 @@ public class ctrlCadastrarCliente extends HttpServlet {
 						+ "CPF: " + cpf
 						+ "Data: " + data
 					+ "</body>"
-				+ "</html>");
+				+ "</html>");*/
 		}
 		
 		

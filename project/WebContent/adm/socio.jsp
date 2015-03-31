@@ -18,7 +18,7 @@
 				</fieldset>
 				
 				<fieldset class="col-sm-6 col-md-6">
-					<input type="hidden" name="inscreverNovoSocio"></input>
+					<input type="hidden" name="operacao" value="inscreverNovoSocio">
 					
 					<div class="form-group">
 						<label for="nome">Nome</label>
@@ -58,12 +58,30 @@
 					</div>
 				</fieldset>
 			</div><!-- fim row -->
+			<button type="submit" class="btn btn-default btn-lg pull-left">
+				<span class="glyphicon glyphicon-floppy-disk"></span>
+				Salvar
+			</button>
 			
-			<div class="row">
+			<a href="../index.jsp">
+				<button type="button" class="btn btn-default btn-lg pull-left">
+					<span class="glyphicon glyphicon-remove"></span>
+					Cancelar
+				</button>
+			</a>			
+		</form>
+	</div><!-- fim container sócio -->
+	
+	<div class="container">
+		<form action="../ctrlCadastrarCliente" method="POST">
+	 	<div class="row">
 				<fieldset class="col-md-12">
 					<legend>Dados dependente</legend>
 				</fieldset>
 				<fieldset class="col-sm-6 col-md-6">
+				
+					<input type="hidden" name="operacao" value="inscreverNovoDependente">
+				
 					<div class="form-group">
 						<label for="nome-dependente">Nome dependente</label>
 						<input type="text" id="nome-dependente" name="nome-dependente" class="form-control">
@@ -126,9 +144,9 @@
 					<span class="glyphicon glyphicon-remove"></span>
 					Cancelar
 				</button>
-			</a>			
-		</form>
-	</div><!-- fim container -->
+			</a>
+		</form><!-- fim form -->
+	</div><!-- fim container dependente -->
 
 </body>
 </html>
