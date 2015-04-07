@@ -1,4 +1,4 @@
-package model.dao;
+package model.application;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -6,7 +6,7 @@ import org.hibernate.cfg.AnnotationConfiguration;
 
 import model.domain.Socio;
 
-public class daoCliente {
+public class applicationCliente {
 	
 	public static final int INSCREVER_NOVO_SOCIO_OK = 1;
 	public static final int INSCREVER_NOVO_SOCIO_ERRO = 0;

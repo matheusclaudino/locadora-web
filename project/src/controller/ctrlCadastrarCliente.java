@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.dao.daoCliente;
+import model.application.applicationCliente;
 
 /**
  * Servlet implementation class ctrlCadastrarCliente
@@ -49,7 +49,7 @@ public class ctrlCadastrarCliente extends HttpServlet {
 			String cpf = request.getParameter("cpf");
 			String data = request.getParameter("data-nascimento");
 		
-			daoCliente.inscreverNovoSocio(nome, endereco, telefone, sexo, cpf, data);
+			applicationCliente.inscreverNovoSocio(nome, endereco, telefone, sexo, cpf, data);
 		
 		/*out.println("<html>"
 					+ "<head>Cadastrar Cliente</head>"
