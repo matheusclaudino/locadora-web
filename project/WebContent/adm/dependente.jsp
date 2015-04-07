@@ -2,6 +2,16 @@
 
 <%@ include file="import/navbar.jsp"%>
 
+
+<%@ page import="org.hibernate.Session"%>
+<%@ page import="org.hibernate.SessionFactory"%>
+<%@ page import="org.hibernate.Query"%>
+<%@ page import="org.hibernate.cfg.AnnotationConfiguration"%>
+<%@ page import="model.domain.Cliente"%>
+<%@ page import="model.domain.Socio"%>
+<%@ page import="java.util.Iterator"%>
+<%@ page import="java.util.List"%>
+
 	<div class="jumbotrom">
 		<div class="container">
 
