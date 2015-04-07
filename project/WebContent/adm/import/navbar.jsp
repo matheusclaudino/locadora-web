@@ -79,6 +79,8 @@
 			            <li><a href="socio.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Sócio</a></li>
 			            <li class="divider"></li>
 			            <li><a href="consultarSocio.jsp"><span class="glyphicon glyphicon-search"></span> Consultar Sócio</a></li>
+			            <li class="divider"></li>
+			            <li><a href="dependente.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Dependente</a></li>
 	         		</ul>
 	        	</li><!-- fim dropdown Sócio -->
 	        	
