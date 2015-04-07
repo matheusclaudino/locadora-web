@@ -23,6 +23,37 @@
 	<div class="container">
 		<form action="../ctrlCadastrarCliente" method="POST">
 	 	<div class="row">
+	 			<input type="hidden" name="operacao" value="inscreverDependente">
+
+				<%
+					SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
+					Session s = sessions.openSession();
+					
+					//Listagem de socios
+					String strQuery = "from Cliente as cli where cli.class=Socio";
+					
+					s.beginTransaction();
+					Query qr = s.createQuery(strQuery);
+					
+					List socios = qr.list();
+				%>
+				
+				Socio:
+				<div class="form-group">
+					<label for="socio">Sócio</label>
+					<select id="socio" name="idSocio" class="form-control">
+						<%
+							Iterator i = socios.iterator();
+							while (i.hasNext()){
+						
+							Cliente c = (Cliente)i.next();
+						%>	
+						 <option value="<%out.println(c.getNumero_inscricao());%>"><%out.println(c.getNome());%></option>
+						
+						<%}%>
+					</select>
+				</div> 
+				
 				<fieldset class="col-md-12">
 					<legend>Dados dependente</legend>
 				</fieldset>
