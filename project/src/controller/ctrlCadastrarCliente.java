@@ -2,6 +2,7 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,7 +10,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.AnnotationConfiguration;
+
 import model.application.applicationCliente;
+import model.domain.Socio;
 
 /**
  * Servlet implementation class ctrlCadastrarCliente
@@ -49,7 +56,11 @@ public class ctrlCadastrarCliente extends HttpServlet {
 			String cpf = request.getParameter("cpf");
 			String data = request.getParameter("data-nascimento");
 		
-			applicationCliente.inscreverNovoSocio(nome, endereco, telefone, sexo, cpf, data);
+			if(applicationCliente.inscreverNovoSocio(nome, endereco, telefone, sexo, cpf, data) == applicationCliente.INSCREVER_NOVO_SOCIO_OK){
+				
+			}else{
+				
+			}
 		
 		/*out.println("<html>"
 					+ "<head>Cadastrar Cliente</head>"
@@ -64,18 +75,27 @@ public class ctrlCadastrarCliente extends HttpServlet {
 				+ "</html>");*/
 		}
 		else if(operacao.equals("inscreverNovoDependente")){
+			String idSocio = request.getParameter("idSocio");
 			String nome = request.getParameter("nome");
 			char sexo = request.getParameter("sexo").charAt(0);
 			String data = request.getParameter("data");
 			
-			out.println("<html>"
-					+ "<head>Cadastrar Cliente</head>"
-					+ "<body>"
-						+ "Nome: " + nome
-						+ "Sexo: " + sexo
-						+ "Data: " + data
-					+ "</body>"
-				+ "</html>");
+			SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
+			Session session = sessions.openSession();
+			
+			String strQuery = "from Cliente where numero_inscricao = " +  idSocio;
+			session.beginTransaction();
+			Query qr = session.createQuery(strQuery);
+			List clientes = qr.list();
+			session.close();
+			
+			Socio socio = (Socio)clientes.get(0);
+			
+			if(applicationCliente.inscreverNovoDependente(socio, nome, sexo, data) == applicationCliente.INSCREVER_NOVO_DEPENDENTE_OK){
+				
+			}else{
+				
+			}
 		}
 		
 		
