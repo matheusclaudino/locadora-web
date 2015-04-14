@@ -4,6 +4,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 
+import model.domain.Dependente;
 import model.domain.Socio;
 
 public class applicationCliente {
@@ -36,7 +37,21 @@ public class applicationCliente {
 		if(nome.equals(""))
 			return INSCREVER_NOVO_DEPENDENTE_ERRO;
 		
-		
+		Dependente d = new Dependente();
+		d.setNome(nome);
+		d.setSexo(sexo);
+		d.setData_nascimento(data);
+		d.setAtivo(true);
+				
+		SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
+		Session session = sessions.openSession();
+				
+		session.beginTransaction();
+		session.save(d);
+		socio.inserirDependente(d);
+		session.update(socio);
+		session.getTransaction().commit();
+		session.close();
 		
 		return INSCREVER_NOVO_DEPENDENTE_OK;
 	}
