@@ -10,6 +10,8 @@ public class applicationCliente {
 	
 	public static final int INSCREVER_NOVO_SOCIO_OK = 1;
 	public static final int INSCREVER_NOVO_SOCIO_ERRO = 0;
+	public static final int INSCREVER_NOVO_DEPENDENTE_OK = 1;
+	public static final int INSCREVER_NOVO_DEPENDENTE_ERRO = 0;
 	
 	public static int inscreverNovoSocio(String nome, String endereco, String telefone, char sexo, String cpf, String data){
 		
@@ -30,12 +32,13 @@ public class applicationCliente {
 		return INSCREVER_NOVO_SOCIO_OK;
 	}
 	
-	public static int inscreverNovoDependente(String nome, char sexo, String data){
+	public static int inscreverNovoDependente(Socio socio, String nome, char sexo, String data){
 		if(nome.equals(""))
-			return INSCREVER_NOVO_SOCIO_ERRO;
+			return INSCREVER_NOVO_DEPENDENTE_ERRO;
 		
 		
-		return INSCREVER_NOVO_SOCIO_OK;
+		
+		return INSCREVER_NOVO_DEPENDENTE_OK;
 	}
 
 }
