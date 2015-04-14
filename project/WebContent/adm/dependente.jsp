@@ -23,7 +23,7 @@
 	<div class="container">
 		<form action="../ctrlCadastrarCliente" method="POST">
 	 	<div class="row">
-	 			<input type="hidden" name="operacao" value="inscreverDependente">
+	 			<input type="hidden" name="operacao" value="inscreverNovoDependente">
 
 				<%
 					SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
@@ -37,29 +37,27 @@
 					
 					List socios = qr.list();
 				%>
-				
-				Socio:
-				<div class="form-group">
-					<label for="socio">Sócio</label>
-					<select id="socio" name="idSocio" class="form-control">
-						<%
-							Iterator i = socios.iterator();
-							while (i.hasNext()){
-						
-							Cliente c = (Cliente)i.next();
-						%>	
-						 <option value="<%out.println(c.getNumero_inscricao());%>"><%out.println(c.getNome());%></option>
-						
-						<%}%>
-					</select>
-				</div> 
+				<fieldset class="col-md-6">
+					<div class="form-group">
+						<label for="socio">Sócio</label>
+						<select id="socio" name="idSocio" class="form-control">
+							<%
+								Iterator i = socios.iterator();
+								while (i.hasNext()){
+							
+								Cliente c = (Cliente)i.next();
+							%>	
+							 <option value="<%out.println(c.getNumero_inscricao());%>"><%out.println(c.getNome());%></option>
+							
+							<%}%>
+						</select>
+					</div> 
+				</fieldset>
 				
 				<fieldset class="col-md-12">
 					<legend>Dados dependente</legend>
 				</fieldset>
 				<fieldset class="col-sm-6 col-md-6">
-				
-					<input type="hidden" name="operacao" value="inscreverNovoDependente">
 				
 					<div class="form-group">
 						<label for="nome">Nome dependente</label>
