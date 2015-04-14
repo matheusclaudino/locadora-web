@@ -34,18 +34,18 @@
 							</div>
 
 							<div class="form-group">
-								<label for="prazo">Prazo devolção</label>
+								<label for="prazo">Prazo devolução</label>
 								<input type="text" class="form-control" id="prazo" name="prazo" 
 									placeholder="dias">
 							</div>
 						</fieldset>	<!--fim fieldset-->
 					</div><!--fim row-->
-					<button type="submit" class="btn btn-default btn-lg pull-left">
+					<button type="submit" class="btn btn-success btn-lg pull-left">
 						<span class="glyphicon glyphicon-floppy-disk"></span>
 						Salvar
 					</button>
 					<a href="../index.jsp">
-						<button type="button" class="btn btn-default btn-lg pull-left">
+						<button type="button" class="btn btn-danger btn-lg pull-left">
 							<span class="glyphicon glyphicon-remove"></span>
 							Cancelar
 						</button>
