@@ -57,7 +57,7 @@ public class ctrlCadastrarCliente extends HttpServlet {
 			String data = request.getParameter("data-nascimento");
 		
 			if(applicationCliente.inscreverNovoSocio(nome, endereco, telefone, sexo, cpf, data) == applicationCliente.INSCREVER_NOVO_SOCIO_OK){
-				
+			
 			}else{
 				
 			}

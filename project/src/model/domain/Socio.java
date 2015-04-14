@@ -12,7 +12,7 @@ import javax.persistence.OneToMany;
 @Entity
 public class Socio extends Cliente {
 	
-	@Column(nullable = false)
+	@Column(nullable = false, columnDefinition = "varchar(255) default '0'")
 	private String cpf;
 	private String endereco;
 	private String telefone;

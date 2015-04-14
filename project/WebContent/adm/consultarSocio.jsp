@@ -6,7 +6,9 @@
 	<%@ page import="org.hibernate.SessionFactory"%>
 	<%@ page import="org.hibernate.Query"%>
 	<%@ page import="org.hibernate.cfg.AnnotationConfiguration"%>
+	<%@ page import="model.domain.Cliente"%>
 	<%@ page import="model.domain.Socio"%>
+	<%@ page import="model.domain.Dependente"%>
 	<%@ page import="java.util.Iterator"%>
 	<%@ page import="java.util.List"%>
 	
@@ -14,7 +16,7 @@
 		SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
 		Session s = sessions.openSession();
 		
-		String strQuery = "from Cliente";
+		String strQuery = "from Cliente WHERE DTYPE = Socio";
 		
 		s.beginTransaction();
 		Query qr = s.createQuery(strQuery);
@@ -72,25 +74,22 @@
 						<%
 							Iterator<Socio> i = socios.iterator();
 							while (i.hasNext()){
-								
 								Socio so = (Socio)i.next();
-
 								out.println("<tr>"
-										
 												+ "<td>" + so.getNome() + "</td>"
 												+ "<td>" + so.getSexo() + "</td>"
 												+ "<td>" + so.getCpf() + "</td>"
 												+ "<td>" + so.getTelefone() + "</td>"
 												+ "<td>" + so.getEndereco() + "</td>"
 												+ "<td>" 
-													+ "<span class=\"btn btn-primary glyphicon glyphicon-refresh\"></span>"
+														+ "<span class=\"btn btn-primary glyphicon glyphicon-refresh\"></span>"
 												+ "</td>"
 												+ "<td>"
-													+ "<span class=\"btn btn-danger glyphicon glyphicon-trash\"></span>"
+														+ "<span class=\"btn btn-danger glyphicon glyphicon-trash\"></span>"
 												+ "</td>"	
 											+ "</tr>");
-								
-							}
+									
+								}
 							s.close();
 						%>
 					</table>
