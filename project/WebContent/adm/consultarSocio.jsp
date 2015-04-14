@@ -41,7 +41,7 @@
 				</fieldset>
 				<fieldset class="col-sm-6 col-md-6">
 					<div class="form-group">
-						<input type="text" id="nome" name="nome" class="form-control" placeholder="Nome da classe">
+						<input type="text" id="nome" name="nome" class="form-control" placeholder="Nome do sócio">
 					</div>				
 				</fieldset>
 				<fieldset class="col-sm-1 col-md-1 input-append">
