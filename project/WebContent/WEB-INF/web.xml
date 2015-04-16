@@ -9,7 +9,6 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
   <servlet>
     <servlet-name>cadClasse</servlet-name>
     <servlet-class>controller.ctrlCadastrarCadastrarClasse</servlet-class>
@@ -18,13 +17,21 @@
     <servlet-name>cadClasse</servlet-name>
     <url-pattern>/classe</url-pattern>
   </servlet-mapping>
-  
   <servlet>
-      <servlet-name>cadCliente</servlet-name>
-      <servlet-class>controller.ctrlCadastrarCliente</servlet-class>
+    <servlet-name>cadCliente</servlet-name>
+    <servlet-class>controller.ctrlCadastrarCliente</servlet-class>
   </servlet>
   <servlet-mapping>
-      <servlet-name>cadCliente</servlet-name>
-      <url-pattern>/cliente</url-pattern>
+    <servlet-name>cadCliente</servlet-name>
+    <url-pattern>/cliente</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>cadAtor</servlet-name>
+    <servlet-class>controller.ctrlCadastrarAtor</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>cadAtor</servlet-name>
+    <url-pattern>/ator</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
