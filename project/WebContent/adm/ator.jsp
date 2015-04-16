@@ -4,7 +4,7 @@
 
 	<div class="jumbotrom">
 		<div class="container">
-			<h1><span class="fa fa-user"></span> Incluir Ator</h1>
+			<h1><span class="fa fa-child"></span> Incluir Ator</h1>
 		</div>
 	</div><!--fim jumbotrom-->
 	
@@ -12,7 +12,7 @@
 	<form action="../ctrlCadastrarAtor" method="POST">
 		<div class="row">
 				<fieldset class="col-md-12">
-					<legend>Dados Ator</legend>
+					<legend>Dados ator</legend>
 				</fieldset>
 				<fieldset class="col-md-6">
 					<input type="hidden" name="operacao" value="inscreverNovoAtor">
