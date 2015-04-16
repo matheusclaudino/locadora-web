@@ -16,6 +16,12 @@ public class Diretor {
 		
 	}
 	
+	public Diretor(String nome) {
+		super();
+		this.nome = nome;
+	}
+
+
 	public long getId() {
 		return id;
 	}
