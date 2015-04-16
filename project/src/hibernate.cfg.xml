@@ -17,6 +17,7 @@
 <mapping class="model.domain.Socio" />
 <mapping class="model.domain.Dependente" />
 <mapping class="model.domain.Ator" />
+<mapping class="model.domain.Titulo" />
 
 
 
