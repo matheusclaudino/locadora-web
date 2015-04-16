@@ -18,7 +18,7 @@
 <mapping class="model.domain.Dependente" />
 <mapping class="model.domain.Ator" />
 <mapping class="model.domain.Titulo" />
-
+<mapping class="model.domain.Diretor" />
 
 
 </session-factory>
