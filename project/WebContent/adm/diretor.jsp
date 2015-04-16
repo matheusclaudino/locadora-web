@@ -4,7 +4,7 @@
 
 	<div class="jumbotrom">
 		<div class="container">
-			<h1><span class="fa fa-bullhorn"> Incluir Diretor</span></h1>
+			<h1><span class="fa fa-bullhorn"></span> Incluir Diretor</h1>
 		</div>
 	</div><!-- fim jumbotrom -->
 	
@@ -16,8 +16,9 @@
 				</fieldset>
 				<fieldset class="col-sm-6 col-md-6 ">
 					<div class="form-group">
+						<input type="hidden" name="operacao" value="inscreverNovoDiretor" />
 						<label for="nome">Nome</label>
-						<input type="text"  class="form-control" id="nome" name="nome" autofocus>
+						<input type="text" class="form-control" id="nome" name="nome" autofocus>
 					</div>
 				</fieldset>
 			</div><!-- fim row -->
