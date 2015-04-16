@@ -33,5 +33,4 @@
     <servlet-name>cadAtor</servlet-name>
     <url-pattern>/ator</url-pattern>
   </servlet-mapping>
-  
 </web-app>
