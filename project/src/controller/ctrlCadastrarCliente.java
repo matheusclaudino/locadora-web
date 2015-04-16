@@ -57,7 +57,8 @@ public class ctrlCadastrarCliente extends HttpServlet {
 			String data = request.getParameter("data-nascimento");
 		
 			if(applicationCliente.inscreverNovoSocio(nome, endereco, telefone, sexo, cpf, data) == applicationCliente.INSCREVER_NOVO_SOCIO_OK){
-			
+				String redirectUrl = "http://localhost:8080/LocadoraProject/index.jsp";
+				response.sendRedirect(redirectUrl);
 			}else{
 				
 			}
