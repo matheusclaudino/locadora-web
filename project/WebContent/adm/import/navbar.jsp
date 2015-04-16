@@ -87,11 +87,20 @@
 	        	<li><a href="#"><span class="fa fa-search"></span> Consultar Título</a></li>
 	        	
 	        	<li class="dropdown">
-	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="fa fa-user"></span> Ator<span class="caret"></span></a>
+	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="fa fa-child"></span> Ator<span class="caret"></span></a>
 	          		<ul class="dropdown-menu" role="menu">
 			            <li><a href="ator.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Ator</a></li>
 			            <li class="divider"></li>
 			            <li><a href="consultarAtor.jsp"><span class="glyphicon glyphicon-search"></span> Consultar Ator</a></li>
+	         		</ul>
+	        	</li><!-- fim dropdown Ator -->
+	        	
+	        	<li class="dropdown">
+	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="fa fa-bullhorn"></span> Diretor<span class="caret"></span></a>
+	          		<ul class="dropdown-menu" role="menu">
+			            <li><a href="diretor.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Diretor</a></li>
+			            <li class="divider"></li>
+			            <li><a href="consultarDiretor.jsp"><span class="glyphicon glyphicon-search"></span> Consultar Diretor</a></li>
 	         		</ul>
 	        	</li><!-- fim dropdown Ator -->
 	        	
