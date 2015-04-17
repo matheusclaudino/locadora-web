@@ -37,6 +37,22 @@ public class Titulo {
 				
 	}
 	
+	
+	public Titulo(String nome, String ano, String sinopse, Set<Ator> atores,
+			Classe classe, Categoria categoria, Diretor diretor,
+			Distribuidor distribuidor) {
+		super();
+		this.nome = nome;
+		this.ano = ano;
+		this.sinopse = sinopse;
+		this.atores = atores;
+		this.classe = classe;
+		this.categoria = categoria;
+		this.diretor = diretor;
+		this.distribuidor = distribuidor;
+	}
+
+
 	public long getId() {
 		return id;
 	}
