@@ -31,11 +31,11 @@
 	Query qryDistribuidor = s.createQuery(queryDistribuidor);
 	Query qryCategoria = s.createQuery(queryCategoria);
 	
-	List atores = qryAtor.list();
-	List classes =  qryClasse.list();
-	List diretores = qryDiretor.list();
-	List distribuidores = qryDistribuidor.list();
-	List categorias = qryCategoria.list();
+	List<Ator> atores = qryAtor.list();
+	List<Classe> classes =  qryClasse.list();
+	List<Diretor> diretores = qryDiretor.list();
+	List<Distribuidor> distribuidores = qryDistribuidor.list();
+	List<Categoria> categorias = qryCategoria.list();
 	
 %>
 	<div class="jumbotrom">
@@ -67,12 +67,9 @@
 								<div class="form-group">
 									<label for="diretor">Diretor</label>
 									<select name="diretor" id="diretor" class="form-control">
-										<%
-										Iterator<Diretor> idir = diretores.iterator();
-										while(idir.hasNext()){
-											Diretor c = idir.next();
-											out.println("<option value=\""+ c.getId() +"\">"+ c.getNome() +"</option>"
-													);
+									<%
+										for(Diretor c: diretores){
+											out.println("<option value=\""+ c.getId() +"\">"+ c.getNome() +"</option>");
 										}
 									%>
 									</select>
@@ -88,12 +85,9 @@
 							<div class="form-group">
 								<label for="categoria">Categoria</label>
 									<select name="categoria" id="categoria" class="form-control">
-										<%
-										Iterator<Categoria> icat = categorias.iterator();
-										while(icat.hasNext()){
-											Categoria c = icat.next();
-											out.println("<option value=\""+ c.getId() +"\">"+ c.getNome() +"</option>"
-													);
+									<%
+										for(Categoria c: categorias){
+											out.println("<option value=\""+ c.getId() +"\">"+ c.getNome() +"</option>");
 										}
 									%>
 									</select>
@@ -103,12 +97,9 @@
 								<label for="classe">Classe</label>
 								<select name="classe" id="classe" class="form-control">
 									<%
-										Iterator<Classe> ic = classes.iterator();
-										while(ic.hasNext()){
-											Classe c = ic.next();
-											out.println("<option value=\""+ c.getId() +"\">"+ c.getNome() +"</option>"
-													);
-										}
+										for(Classe c: classes){
+												out.println("<option value=\""+ c.getId() +"\">"+ c.getNome() +"</option>");
+										}	
 									%>
 								</select>
 							</div>
@@ -117,11 +108,8 @@
 								<label for="distribuidor">Distribuidor</label>
 								<select name="distribuidor" id="distribuidor" class="form-control">
 									<%
-										Iterator<Distribuidor> id = distribuidores.iterator();
-										while(id.hasNext()){
-											Distribuidor c = id.next();
-											out.println("<option value=\""+ c.getCnpj() +"\">"+ c.getRazaoSocial() +"</option>"
-													);
+										for(Distribuidor c: distribuidores){
+												out.println("<option value=\""+ c.getCnpj() +"\">"+ c.getRazaoSocial() +"</option>");
 										}
 									%>
 								</select>
@@ -137,13 +125,11 @@
 								</tr>
 								<tr>
 									<%
-										Iterator<Ator> i = atores.iterator();
-										while(i.hasNext()){
-											Ator a = i.next();
+										for(Ator c: atores){
 											out.println(
 													"<tr>"
-													+ 	"<td>"+ a.getNome() +"</td>"
-													+ 	"<td><input type=\"checkbox\" name=\"selecao-ator\" value=\""+ a.getId() +"\"></td>"
+													+ 	"<td>"+ c.getNome() +"</td>"
+													+ 	"<td><input type=\"checkbox\" name=\"selecao-ator\" value=\""+ c.getId() +"\"></td>"
 													+ "</tr>");
 										}
 									%>
