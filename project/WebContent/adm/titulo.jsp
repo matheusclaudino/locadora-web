@@ -2,6 +2,37 @@
 
 <%@ include file="import/navbar.jsp"%>
 
+	<%@page import="org.hibernate.cfg.AnnotationConfiguration"%>
+	<%@page import="org.hibernate.SessionFactory"%>
+	<%@page import="org.hibernate.Session"%>
+	<%@page import="org.hibernate.Query"%>
+	<%@page import="java.util.List"%>
+	<%@ page import="java.util.Iterator"%>
+	<%@ page import="model.domain.Ator"%>
+	<%@ page import="model.domain.Classe"%>
+	<%@ page import="model.domain.Diretor"%>
+	<%@ page import="model.domain.Distribuidor"%>
+<%
+	SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
+	Session s = sessions.openSession();
+	
+	String queryAtor = "from Ator";
+	String queryClasse = "from Classe";
+	String queryDiretor = "from Diretor";
+	String queryDistribuidor = "from Distribuidor";
+	
+	s.beginTransaction();
+	Query qryAtor = s.createQuery(queryAtor);
+	Query qryClasse = s.createQuery(queryClasse);
+	Query qryDiretor = s.createQuery(queryDiretor);
+	Query qryDistribuidor = s.createQuery(queryDistribuidor);
+	
+	List atores = qryAtor.list();
+	List classes =  qryClasse.list();
+	List diretores = qryDiretor.list();
+	List distribuidores = qryDistribuidor.list();
+	
+%>
 	<div class="jumbotrom">
 		<div class="container">
 
@@ -23,13 +54,22 @@
 								</div>
 								
 								<div class="form-group">
-									<label for="ator">Atores</label>
-									<input type="text" class="form-control" id="ator" name="ator" >	
+									<label for="sinopse">Sinopse</label>
+									<input type="text" class="form-control" id="sinopse" name="sinopse">
 								</div>
 	
 								<div class="form-group">
 									<label for="diretor">Diretor</label>
-									<input type="text" class="form-control" id="diretor" name="diretor">
+									<select name="diretor" id="diretor" class="form-control">
+										<%
+										Iterator<Diretor> idir = diretores.iterator();
+										while(idir.hasNext()){
+											Diretor c = idir.next();
+											out.println("<option value=\"classe"+ c.getId() +"\">"+ c.getNome() +"</option>"
+													);
+										}
+									%>
+									</select>
 								</div>
 								
 								<div class="form-group">
@@ -39,11 +79,6 @@
 						</fieldset>	<!--fim fieldset-->
 						<fieldset class="col-sm-6 col-md-6">
 							
-								<div class="form-group">
-									<label for="sinopse">Sinopse</label>
-									<input type="text" class="form-control" id="sinopse" name="sinopse">
-								</div>
-							
 							<div class="form-group">
 								<label for="categoria">Categoria</label>
 								<input type="text" class="form-control" id="categoria" name="categoria">
@@ -51,21 +86,55 @@
 							
 							<div class="form-group">
 								<label for="classe">Classe</label>
-								<select name="classe-correspondente" id="classe" class="form-control">
-									<option value="cla1">...</option>
-									<option value="cla2">...</option>
+								<select name="classe" id="classe" class="form-control">
+									<%
+										Iterator<Classe> ic = classes.iterator();
+										while(ic.hasNext()){
+											Classe c = ic.next();
+											out.println("<option value=\"classe"+ c.getId() +"\">"+ c.getNome() +"</option>"
+													);
+										}
+									%>
 								</select>
 							</div>
 							
 							<div class="form-group">
 								<label for="distribuidor">Distribuidor</label>
-								<select name="distribuidor-correspondente" id="distribuidor" class="form-control">
-									<option value="dis1">...</option>
-									<option value="dis2">...</option>
+								<select name="distribuidor" id="distribuidor" class="form-control">
+									<%
+										Iterator<Distribuidor> id = distribuidores.iterator();
+										while(id.hasNext()){
+											Distribuidor c = id.next();
+											out.println("<option value=\"classe"+ c.getCnpj() +"\">"+ c.getRazaoSocial() +"</option>"
+													);
+										}
+									%>
 								</select>
 							</div>
 							
 						</fieldset>	<!--fim fieldset-->
+						<fieldset class="col-sm-6 col-md-6">
+							<label>Atores</label>
+							<table class="table table-striped table-bordered">
+								<tr>
+									<th>Nome</th>
+									<th>Selecionar</th>
+								</tr>
+								<tr>
+									<%
+										Iterator<Ator> i = atores.iterator();
+										while(i.hasNext()){
+											Ator a = i.next();
+											out.println(
+													"<td>"+ a.getNome() +"</td>"
+													+ "<td><input type=\"checkbox\" name=\"selecao-ator\" value=\"ativo"+ a.getId() +"\"></td>" );
+										}
+									%>
+								</tr>
+							</table>	
+							
+						</fieldset><!-- fim fieldset table -->
+						<%s.close();%>
 					</div><!--fim row-->
 					<button type="submit" class="btn btn-default btn-lg pull-left">
 						<span class="glyphicon glyphicon-floppy-disk"></span>
