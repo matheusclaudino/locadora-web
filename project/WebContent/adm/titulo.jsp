@@ -12,6 +12,8 @@
 	<%@ page import="model.domain.Classe"%>
 	<%@ page import="model.domain.Diretor"%>
 	<%@ page import="model.domain.Distribuidor"%>
+	<%@ page import="model.domain.Categoria"%>
+	
 <%
 	SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
 	Session s = sessions.openSession();
@@ -20,17 +22,20 @@
 	String queryClasse = "from Classe";
 	String queryDiretor = "from Diretor";
 	String queryDistribuidor = "from Distribuidor";
+	String queryCategoria = "from Categoria";
 	
 	s.beginTransaction();
 	Query qryAtor = s.createQuery(queryAtor);
 	Query qryClasse = s.createQuery(queryClasse);
 	Query qryDiretor = s.createQuery(queryDiretor);
 	Query qryDistribuidor = s.createQuery(queryDistribuidor);
+	Query qryCategoria = s.createQuery(queryCategoria);
 	
 	List atores = qryAtor.list();
 	List classes =  qryClasse.list();
 	List diretores = qryDiretor.list();
 	List distribuidores = qryDistribuidor.list();
+	List categorias = qryCategoria.list();
 	
 %>
 	<div class="jumbotrom">
@@ -82,7 +87,16 @@
 							
 							<div class="form-group">
 								<label for="categoria">Categoria</label>
-								<input type="text" class="form-control" id="categoria" name="categoria">
+									<select name="categoria" id="categoria" class="form-control">
+										<%
+										Iterator<Categoria> icat = categorias.iterator();
+										while(icat.hasNext()){
+											Categoria c = icat.next();
+											out.println("<option value=\""+ c.getId() +"\">"+ c.getNome() +"</option>"
+													);
+										}
+									%>
+									</select>
 							</div>
 							
 							<div class="form-group">
