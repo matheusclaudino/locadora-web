@@ -42,7 +42,7 @@
 	</div><!--fim jumbotrom-->
 	
 	<div class="container">
-				<form>
+				<form action="../ctrlCadastrarTitulo" method="POST">
 					<div class="row">
 						<fieldset class="col-md-12">
 							<legend>Dados título</legend>
