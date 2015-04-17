@@ -20,6 +20,7 @@
 <mapping class="model.domain.Titulo" />
 <mapping class="model.domain.Diretor" />
 <mapping class="model.domain.Classe" />
+<mapping class="model.domain.Distribuidor" />
 
 
 </session-factory>
