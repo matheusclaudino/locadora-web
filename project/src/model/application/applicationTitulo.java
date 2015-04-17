@@ -14,8 +14,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 
 public class applicationTitulo {
-	private static final int INSCREVER_NOVO_TITULO_OK = 1;
-	private static final int INSCREVER_NOVO_TITULO_ERRO = 0;
+	public static final int INSCREVER_NOVO_TITULO_OK = 1;
+	public static final int INSCREVER_NOVO_TITULO_ERRO = 0;
 	
 	public static int inscreverNovoTitulo(String nome, String ano, String sinopse, Set<Ator> atores,
 			Classe classe, Categoria categoria, Diretor diretor,
