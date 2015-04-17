@@ -2,7 +2,8 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -61,7 +62,7 @@ public class ctrlCadastrarTitulo extends HttpServlet {
 			String classe = request.getParameter("classe");
 			String distribuidor = request.getParameter("distribuidor");
 			String atores[] = request.getParameterValues("selecao-ator");
-			ArrayList<Ator> ator= new ArrayList();
+			Set<Ator> ator= new HashSet<Ator>();
 			
 			SessionFactory  sessions = new AnnotationConfiguration().configure().buildSessionFactory();
 			//Pegando todos os atores selecionados no checkbox no banco
