@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.application.applicationTitulo;
 import model.domain.Ator;
 import model.domain.Categoria;
 import model.domain.Classe;
@@ -62,7 +63,7 @@ public class ctrlCadastrarTitulo extends HttpServlet {
 			String classe = request.getParameter("classe");
 			String distribuidor = request.getParameter("distribuidor");
 			String atores[] = request.getParameterValues("selecao-ator");
-			Set<Ator> ator= new HashSet<Ator>();
+			Set<Ator> ator = new HashSet<Ator>();
 			
 			SessionFactory  sessions = new AnnotationConfiguration().configure().buildSessionFactory();
 			//Pegando todos os atores selecionados no checkbox no banco
@@ -99,6 +100,12 @@ public class ctrlCadastrarTitulo extends HttpServlet {
 			Categoria cat = (Categoria) qryCategoria.uniqueResult();
 			
 			session.close();
+			
+			if(applicationTitulo.inscreverNovoTitulo(nome, ano, sinopse, ator, cla, cat, dir, dis) == applicationTitulo.INSCREVER_NOVO_TITULO_OK){
+				
+			}else{
+				
+			}
 			
 			
 			
