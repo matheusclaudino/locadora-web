@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import model.domain.Ator;
+import model.domain.Categoria;
 import model.domain.Classe;
 import model.domain.Diretor;
 import model.domain.Distribuidor;
@@ -80,18 +81,21 @@ public class ctrlCadastrarTitulo extends HttpServlet {
 			SessionFactory s = new AnnotationConfiguration().configure().buildSessionFactory();
 			Session session = s.openSession();
 			
-			String queryClasse = "from Classe WHERE id =" + classe;
+			String queryClasse = "FROM Classe WHERE id =" + classe;
 			String queryDiretor = "FROM Diretor WHERE id = " +  diretor;
-			String queryDistribuidor = "from Distribuidor WHERE cnpj = " + distribuidor;
+			String queryDistribuidor = "FROM Distribuidor WHERE cnpj = " + distribuidor;
+			String queryCategoria = "FROM Categoria WHERE id = " + categoria;
 			
 			session.beginTransaction();
 			Query qryClasse = session.createQuery(queryClasse);
 			Query qryDiretor = session.createQuery(queryDiretor);
 			Query qryDistribuidor = session.createQuery(queryDistribuidor);
+			Query qryCategoria = session.createQuery(queryCategoria);
 
 			Classe cla =  (Classe) qryClasse.uniqueResult();
 			Diretor dir = (Diretor) qryDiretor.uniqueResult();
 			Distribuidor dis = (Distribuidor) qryDistribuidor.uniqueResult();
+			Categoria cat = (Categoria) qryCategoria.uniqueResult();
 			
 			session.close();
 			
