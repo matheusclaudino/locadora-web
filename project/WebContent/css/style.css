@@ -51,3 +51,7 @@ table tr th{
 .container h1{
 	margin-top: 75px;
 }
+
+form textarea{
+	resize: none;
+}
