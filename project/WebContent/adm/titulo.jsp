@@ -55,7 +55,7 @@
 								
 								<div class="form-group">
 									<label for="sinopse">Sinopse</label>
-									<input type="text" class="form-control" id="sinopse" name="sinopse">
+									<textarea class="form-control" id="sinopse" name="sinopse" rows="5" placeholder="Escreva a sinopse"></textarea>
 								</div>
 	
 								<div class="form-group">
