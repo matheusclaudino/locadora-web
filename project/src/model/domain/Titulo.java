@@ -20,15 +20,18 @@ public class Titulo {
 	private String nome;
 	private String ano;
 	private String sinopse;
-	private String categoria;
+
 	@ManyToMany(cascade = CascadeType.ALL)
 	private Set<Ator> atores = new HashSet<Ator>();
 	@ManyToOne
 	private Classe classe;
 	@ManyToOne
+	private Categoria categoria;
+	@ManyToOne
 	private Diretor diretor;
 	@ManyToOne
 	private Distribuidor distribuidor;
+	
 	
 	public Titulo(){
 				
@@ -66,14 +69,6 @@ public class Titulo {
 		this.sinopse = sinopse;
 	}
 
-	public String getCategoria() {
-		return categoria;
-	}
-
-	public void setCategoria(String categoria) {
-		this.categoria = categoria;
-	}
-
 	public Set<Ator> getAtores() {
 		return atores;
 	}
@@ -88,6 +83,14 @@ public class Titulo {
 
 	public void setClasse(Classe classe) {
 		this.classe = classe;
+	}
+	
+	public Categoria getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
 	}
 
 	public Diretor getDiretor() {
