@@ -8,8 +8,8 @@ import model.domain.Classe;
 
 public class applicationClasse {
 
-	private static final int INSCREVER_NOVA_CLASSE_OK = 1;
-	private static final int INSCREVER_NOVA_CLASSE_ERRO = 0;
+	public static final int INSCREVER_NOVA_CLASSE_OK = 1;
+	public static final int INSCREVER_NOVA_CLASSE_ERRO = 0;
 	
 	public static int inscreverNovaClasse(String nome, double valor, int prazo){
 		if(nome.equals(""))
