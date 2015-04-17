@@ -66,7 +66,7 @@
 										Iterator<Diretor> idir = diretores.iterator();
 										while(idir.hasNext()){
 											Diretor c = idir.next();
-											out.println("<option value=\"classe"+ c.getId() +"\">"+ c.getNome() +"</option>"
+											out.println("<option value=\""+ c.getId() +"\">"+ c.getNome() +"</option>"
 													);
 										}
 									%>
@@ -92,7 +92,7 @@
 										Iterator<Classe> ic = classes.iterator();
 										while(ic.hasNext()){
 											Classe c = ic.next();
-											out.println("<option value=\"classe"+ c.getId() +"\">"+ c.getNome() +"</option>"
+											out.println("<option value=\""+ c.getId() +"\">"+ c.getNome() +"</option>"
 													);
 										}
 									%>
@@ -106,7 +106,7 @@
 										Iterator<Distribuidor> id = distribuidores.iterator();
 										while(id.hasNext()){
 											Distribuidor c = id.next();
-											out.println("<option value=\"classe"+ c.getCnpj() +"\">"+ c.getRazaoSocial() +"</option>"
+											out.println("<option value=\""+ c.getCnpj() +"\">"+ c.getRazaoSocial() +"</option>"
 													);
 										}
 									%>
