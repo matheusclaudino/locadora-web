@@ -1,11 +1,15 @@
 package controller;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import model.application.applicationCategoria;
+import model.application.applicationDiretor;
 
 /**
  * Servlet implementation class ctrlCadastrarCategoria
@@ -33,7 +37,20 @@ public class ctrlCadastrarCategoria extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		String operacao = request.getParameter("operacao");
+		
+		if(operacao.equals("inscreverNovaCategoria")){
+			String nome = request.getParameter("nome");
+			
+			if(applicationCategoria.inscreverNovaCategoria(nome) ==  applicationCategoria.INSCREVER_NOVA_CATEGORIA_OK){
+				
+			}else{
+				
+			}
+		}else{
+			
+		}
+		
 	}
 
 }
