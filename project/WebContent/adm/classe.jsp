@@ -30,7 +30,7 @@
 								<div class="input-group">
 									<span class="input-group-addon">R$</span>
 									<input type="text" class="form-control" id="valor-locacao" name="valor-locacao" 
-										placeholder="000,00">
+										placeholder="00.00">
 								</div>
 							</div>
 
