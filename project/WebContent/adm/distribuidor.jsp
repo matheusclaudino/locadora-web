@@ -17,6 +17,7 @@
 							<legend>Dados empresa</legend>
 
 							<div class="form-group">
+								<input type="hidden" name="operacao" value="inscreverNovoDistribuidor">
 								<label for="razao">Razão social</label>
 								<input type="text" class="form-control" id="razao" name="razao" autofocus>	
 							</div>
