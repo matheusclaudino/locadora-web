@@ -11,7 +11,7 @@ public class applicationDistribuidor {
 	public static final int INSCREVER_NOVO_DISTRIBUIDOR_OK = 1;
 	public static final int INSCREVER_NOVO_DISTRIBUIDOR_ERRO = 0;
 	
-	public static int inscreverNovoDistribuidor(int cnpj, String razao){
+	public static int inscreverNovoDistribuidor(long cnpj, String razao){
 		if(razao.equals(""))
 			return INSCREVER_NOVO_DISTRIBUIDOR_ERRO;
 		

@@ -44,7 +44,7 @@ public class ctrlCadastrarDistribuidor extends HttpServlet {
 			String cnpj = request.getParameter("cnpj");
 			String razao = request.getParameter("razao");
 			
-			if(applicationDistribuidor.inscreverNovoDistribuidor(Integer.parseInt(cnpj), razao) == applicationDistribuidor.INSCREVER_NOVO_DISTRIBUIDOR_OK){
+			if(applicationDistribuidor.inscreverNovoDistribuidor(Long.parseLong(cnpj), razao) == applicationDistribuidor.INSCREVER_NOVO_DISTRIBUIDOR_OK){
 				
 			}else{
 				
