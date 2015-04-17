@@ -1,6 +1,6 @@
-<%@ import file="header.jsp" %>
+<%@ include file="import/head.jsp" %>
 
-<%@ import file="navbar.jsp" %>
+<%@ include file="import/navbar.jsp" %>
 
 	<div class="jumbotrom">
 		<div class="container">
