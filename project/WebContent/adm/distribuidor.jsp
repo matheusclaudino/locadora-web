@@ -11,7 +11,7 @@
 	</div><!--fim jumbotrom-->
 	
 	<div class="container">
-				<form>
+				<form action="../ctrlCadastrarDistribuidor" method="POST">
 					<div class="row">
 						<fieldset class="col-md-6">
 							<legend>Dados empresa</legend>
