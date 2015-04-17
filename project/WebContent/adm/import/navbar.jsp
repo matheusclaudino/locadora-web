@@ -102,7 +102,16 @@
 			            <li class="divider"></li>
 			            <li><a href="consultarDiretor.jsp"><span class="glyphicon glyphicon-search"></span> Consultar Diretor</a></li>
 	         		</ul>
-	        	</li><!-- fim dropdown Ator -->
+	        	</li><!-- fim dropdown Diretor -->
+	        	
+	        	<li class="dropdown">
+	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="fa fa-th"></span> Categoria<span class="caret"></span></a>
+	          		<ul class="dropdown-menu" role="menu">
+			            <li><a href="categoria.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Categoria</a></li>
+			            <li class="divider"></li>
+			            <li><a href="consultarCategoria.jsp"><span class="glyphicon glyphicon-search"></span> Consultar Categoria</a></li>
+	         		</ul>
+	        	</li><!-- fim dropdown Categoria -->
 	        	
 			</ul><!-- fim navbar-collapse -->
 		</nav><!--fim navbar-->
