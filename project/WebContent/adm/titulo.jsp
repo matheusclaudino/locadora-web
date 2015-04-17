@@ -126,8 +126,10 @@
 										while(i.hasNext()){
 											Ator a = i.next();
 											out.println(
-													"<td>"+ a.getNome() +"</td>"
-													+ "<td><input type=\"checkbox\" name=\"selecao-ator\" value=\"ativo"+ a.getId() +"\"></td>" );
+													"<tr>"
+													+ 	"<td>"+ a.getNome() +"</td>"
+													+ 	"<td><input type=\"checkbox\" name=\"selecao-ator\" value=\"ativo"+ a.getId() +"\"></td>"
+													+ "</tr>");
 										}
 									%>
 								</tr>
