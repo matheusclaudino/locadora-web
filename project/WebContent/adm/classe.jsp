@@ -19,6 +19,7 @@
 						
 						<fieldset class="col-md-6">
 							<div class="form-group">
+								<input type="hidden" name="operacao" value="inscreverNovaClasse">
 								<label for="nome">Nome completo</label>
 								<input type="text" class="form-control" id="nome" name="nome" autofocus>	
 							</div>
