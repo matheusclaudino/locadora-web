@@ -129,7 +129,7 @@
 											out.println(
 													"<tr>"
 													+ 	"<td>"+ a.getNome() +"</td>"
-													+ 	"<td><input type=\"checkbox\" name=\"selecao-ator\" value=\"ativo"+ a.getId() +"\"></td>"
+													+ 	"<td><input type=\"checkbox\" name=\"selecao-ator\" value=\""+ a.getId() +"\"></td>"
 													+ "</tr>");
 										}
 									%>
