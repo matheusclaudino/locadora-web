@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.application.applicationClasse;
+
 /**
  * Servlet implementation class ctrlCadastrarClasse
  */
@@ -31,22 +33,21 @@ public class ctrlCadastrarClasse extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 		PrintWriter out = response.getWriter();
+		String operacao = request.getParameter("operacao");
 		
-		String nome = request.getParameter("nome");
-		String valor = request.getParameter("valor-locacao");
-		String prazo = request.getParameter("prazo");
-		
-		out.println("<html>"
-				+ "<title> Servlet Classe"
-				+ "</title>"
-				+ "<body>"
-				+ "Nome: "+ nome +"<br>"
-				+ "Valor: " + valor + "<br>"
-				+ "Prazo: " + prazo + "<br>"
-				+ "</body>"
-				+ "</html");
-		
-		
+		if(operacao.equals("inscreverNovaClasse")){
+			String nome = request.getParameter("nome");
+			String valor = request.getParameter("valor-locacao");
+			String prazo = request.getParameter("prazo");
+			
+			if(applicationClasse.inscreverNovaClasse(nome, Double.parseDouble(valor), Integer.parseInt(prazo)) == applicationClasse.INSCREVER_NOVA_CLASSE_OK){
+				
+			}else{
+				
+			}
+			
+			
+		}
 	}
 
 }

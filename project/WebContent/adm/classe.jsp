@@ -37,7 +37,7 @@
 							<div class="form-group">
 								<label for="prazo">Prazo devolução</label>
 								<input type="text" class="form-control" id="prazo" name="prazo" 
-									placeholder="dias">
+									placeholder="Dias">
 							</div>
 						</fieldset>	<!--fim fieldset-->
 					</div><!--fim row-->
