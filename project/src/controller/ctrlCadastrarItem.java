@@ -1,11 +1,20 @@
 package controller;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import model.domain.TipoItem;
+import model.domain.Titulo;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.AnnotationConfiguration;
 
 /**
  * Servlet implementation class ctrlCadastrarItem
@@ -43,6 +52,20 @@ public class ctrlCadastrarItem extends HttpServlet {
 			String data = request.getParameter("data");
 			String tipo = request.getParameter("tipo");
 			
+			SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
+			Session s = sessions.openSession();	
+			
+			String qTitulo = "FROM Titulo WHERE id =" + titulo;
+			String qTipo = "FROM TipoItem WHERE id =" + tipo;
+		
+			s.beginTransaction();
+			Query qryTitulo = s.createQuery(qTitulo);
+			Query qryTipo = s.createQuery(qTipo);
+			
+			Titulo t = (Titulo)qryTitulo.uniqueResult();
+			TipoItem ti = (TipoItem)qryTipo.uniqueResult();
+			
+			s.close();
 		}
 	}
 
