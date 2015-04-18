@@ -7,6 +7,7 @@
 	<%@page import="org.hibernate.Session"%>
 	<%@page import="org.hibernate.Query"%>
 	<%@ page import="java.util.List"%>
+	<%@ page import="model.domain.Titulo"%>
 	<%@ page import="model.domain.TipoItem"%>
 	
 <%
@@ -14,12 +15,15 @@
 	SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
 	Session s = sessions.openSession();
 	
+	String qTitulo = "FROM Titulo";
 	String qTipoItem = "FROM TipoItem";
 	
 	s.beginTransaction();
 	
+	Query qryTitulo = s.createQuery(qTitulo);
 	Query qryTipoItem = s.createQuery(qTipoItem);
 	
+	List<Titulo> titulos = qryTitulo.list();  
 	List<TipoItem> tipoItens = qryTipoItem.list();
 %>
 
@@ -44,12 +48,19 @@
 
 							<div class="form-group">
 								<label for="titulo">Título</label>
-								<input type="text" class="form-control" id="titulo" name="titulo">
+								<select name="titulo" id="titulo" class="form-control">
+									<%
+										//Percorrendo os titulos
+										for(Titulo t: titulos){
+											out.println("<option value=\""+t.getId()+"\">" + t.getNome() + "</option>");
+										}
+									 %>
+								</select>
 							</div>
 							
 							<div class="form-group">
 								<label for="data">Data de aquisição</label>
-								<input type="text" class="form-control" id="data" name="data" placeholder="dd/mm/aaaa">
+								<input type="date" class="form-control" id="data" name="data" placeholder="dd/mm/aaaa">
 							</div>
 							
 							<div class="form-group">
