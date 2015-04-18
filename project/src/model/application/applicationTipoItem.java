@@ -7,8 +7,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 
 public class applicationTipoItem {
-	private static final int INSCREVER_NOVO_TIPO_ITEM_OK = 1;
-	private static final int INSCREVER_NOVO_TIPO_ITEM_ERRO = 0;
+	public static final int INSCREVER_NOVO_TIPO_ITEM_OK = 1;
+	public static final int INSCREVER_NOVO_TIPO_ITEM_ERRO = 0;
 	
 	public static int inscreverNovoTipoItem(String nome){
 		if(nome.equals(""))
