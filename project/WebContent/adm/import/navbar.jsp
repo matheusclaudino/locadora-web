@@ -116,7 +116,7 @@
 	        	<li class="dropdown">
 	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="fa fa-cubes"></span> Tipo Item<span class="caret"></span></a>
 	          		<ul class="dropdown-menu" role="menu">
-			            <li><a href="item-titulo.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Tipo Item</a></li>
+			            <li><a href="tipo-item.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Tipo Item</a></li>
 			            <li class="divider"></li>
 			            <li><a href="consultarItemTitulo.jsp"><span class="glyphicon glyphicon-search"></span> Consultar Tipo Item</a></li>
 	         		</ul>
