@@ -23,7 +23,7 @@
 <mapping class="model.domain.Distribuidor" />
 <mapping class="model.domain.Categoria" />
 <mapping class="model.domain.TipoItem" />
-
+<mapping class="model.domain.Item" />
 
 
 </session-factory>
