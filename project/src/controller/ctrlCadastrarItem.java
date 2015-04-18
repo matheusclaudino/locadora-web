@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.application.applicationItem;
 import model.domain.TipoItem;
 import model.domain.Titulo;
 
@@ -66,6 +67,12 @@ public class ctrlCadastrarItem extends HttpServlet {
 			TipoItem ti = (TipoItem)qryTipo.uniqueResult();
 			
 			s.close();
+			
+			if(applicationItem.inscreverNovoItem(Long.parseLong(numero), data, t, ti) == applicationItem.INSCREVER_NOVO_ITEM_OK){
+				
+			}else{
+				
+			}
 		}
 	}
 
