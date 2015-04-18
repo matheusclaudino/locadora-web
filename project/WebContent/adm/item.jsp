@@ -42,6 +42,7 @@
 							<legend>Dados item</legend>
 
 							<div class="form-group">
+								<input type="hidden" name="operacao" value="inscreverNovoItem">
 								<label for="numero">Número série</label>
 								<input type="text" class="form-control" id="numero" name="numero" autofocus>	
 							</div>
