@@ -4,7 +4,7 @@
 
 	<div class="jumbotrom">
 		<div class="container">
-			<h1><span class="fa fa-cubes"></span> Incuir item título</h1>
+			<h1><span class="fa fa-cubes"></span> Incuir tipo item</h1>
 		</div>
 	</div>
 	
@@ -12,7 +12,7 @@
 		<form active="../ctrlCadastrarItemTitulo" method="POST">
 			<div class="row">
 				<fieldset class="col-md-12">
-					<legend>Dados item título</legend>
+					<legend>Dados tipo item</legend>
 				</fieldset>
 				<fieldset class="col-sm-6 col-md-6">
 					<div class="form-group">
