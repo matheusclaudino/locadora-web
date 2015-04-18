@@ -22,6 +22,7 @@
 <mapping class="model.domain.Classe" />
 <mapping class="model.domain.Distribuidor" />
 <mapping class="model.domain.Categoria" />
+<mapping class="model.domain.TipoItem" />
 
 
 
