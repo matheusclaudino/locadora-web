@@ -1,12 +1,39 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
+<%@ include file="import/head.jsp" %>
+
+<%@ include file="import/navbar.jsp" %>
+
+	<div class="jumbotrom">
+		<div class="container">
+			<h1><span class="fa fa-cubes"></span> Incuir item título</h1>
+		</div>
+	</div>
+	
+	<div class="container">
+		<form active="../ctrlCadastrarItemTitulo" method="POST">
+			<div class="row">
+				<fieldset class="col-md-12">
+					<legend>Dados item título</legend>
+				</fieldset>
+				<fieldset class="col-sm-6 col-md-6">
+					<div class="form-group">
+						<input type="hidden" name="operacao" value="inscreverNovoItemTitulo">
+						<label for="nome">Nome</label>
+						<input type="text" id="nome" name="nome" class="form-control" autofocus">
+					</div>
+				</fieldset>
+			</div><!-- fim row -->
+			<button class="btn btn-primary btn-lg pull-left">
+				<span class="glyphicon glyphicon-floppy-disk"></span>
+				Salvar
+			</button>
+			<a href="../index.jsp">
+				<button class="btn btn-danger btn-lg pull left">
+					<span class="glyphicon glyphicon-remove"></span>
+					Cancelar
+				</button>
+			</a>
+		</form><!-- fim form -->
+	</div><!-- fim container -->
 
 </body>
 </html>
