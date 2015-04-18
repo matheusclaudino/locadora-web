@@ -9,7 +9,7 @@
 	</div>
 	
 	<div class="container">
-		<form active="../ctrlCadastrarTipoItem" method="POST">
+		<form action="../ctrlCadastrarTipoItem" method="POST">
 			<div class="row">
 				<fieldset class="col-md-12">
 					<legend>Dados tipo item</legend>
