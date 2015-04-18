@@ -2,6 +2,27 @@
 	
 <%@ include file="import/navbar.jsp"%>
 
+	<%@page import="org.hibernate.cfg.AnnotationConfiguration"%>
+	<%@page import="org.hibernate.SessionFactory"%>
+	<%@page import="org.hibernate.Session"%>
+	<%@page import="org.hibernate.Query"%>
+	<%@ page import="java.util.List"%>
+	<%@ page import="model.domain.TipoItem"%>
+	
+<%
+	//Criando conexão
+	SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
+	Session s = sessions.openSession();
+	
+	String qTipoItem = "FROM TipoItem";
+	
+	s.beginTransaction();
+	
+	Query qryTipoItem = s.createQuery(qTipoItem);
+	
+	List<TipoItem> tipoItens = qryTipoItem.list();
+%>
+
 	<div class="jumbotrom">
 		<div class="container">
 
@@ -34,12 +55,17 @@
 							<div class="form-group">
 								<label for="tipo">Tipo item</label>
 								<select name="tipo-item" id="tipo" class="form-control">
-									<option value="dvd">DVD</option>
-									<option value="fita">Fita</option>
+									<%
+										//Percorrendo os tipo de itens
+										for(TipoItem t: tipoItens){
+											out.println("<option value=\""+t.getId()+"\">" + t.getNome() + "</option>");	
+										}
+									 %>
 								</select>
 							</div>
 							
 						</fieldset>	<!--fim fieldset-->
+						<%s.close(); %>
 					</div><!--fim row-->
 					<button type="submit" class="btn btn-default btn-lg pull-left">
 						<span class="glyphicon glyphicon-floppy-disk"></span>
