@@ -16,7 +16,7 @@
 				</fieldset>
 				<fieldset class="col-sm-6 col-md-6">
 					<div class="form-group">
-						<input type="hidden" name="operacao" value="inscreverNovoItemTitulo">
+						<input type="hidden" name="operacao" value="inscreverNovoTipoItem">
 						<label for="nome">Nome</label>
 						<input type="text" id="nome" name="nome" class="form-control" autofocus">
 					</div>
