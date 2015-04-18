@@ -36,7 +36,7 @@
 	</div><!--fim jumbotrom-->
 	
 	<div class="container">
-				<form>
+				<form action="../ctrlCadastrarItem" method="POST">
 					<div class="row">
 						<fieldset class="col-md-6">
 							<legend>Dados item</legend>
