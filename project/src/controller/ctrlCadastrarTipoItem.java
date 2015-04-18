@@ -1,11 +1,14 @@
 package controller;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import model.application.applicationTipoItem;
 
 /**
  * Servlet implementation class ctrlCadastrarTipoItem
@@ -39,6 +42,11 @@ public class ctrlCadastrarTipoItem extends HttpServlet {
 		if(operacao.equals("inscreverNovoTipoItem")){
 			String nome = request.getParameter("nome");
 			
+			if(applicationTipoItem.inscreverNovoTipoItem(nome) == applicationTipoItem.INSCREVER_NOVO_TIPO_ITEM_OK){
+				
+			}else{
+				
+			}
 						
 		}else{
 			
