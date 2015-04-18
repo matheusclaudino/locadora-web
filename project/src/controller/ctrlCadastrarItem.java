@@ -34,6 +34,16 @@ public class ctrlCadastrarItem extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		String operacao = request.getParameter("operacao");
+		
+		if(operacao.equals("inscreveNovoItem")){
+			
+			String numero = request.getParameter("numero");
+			String titulo = request.getParameter("titulo");
+			String data = request.getParameter("data");
+			String tipo = request.getParameter("tipo");
+			
+		}
 	}
 
 }
