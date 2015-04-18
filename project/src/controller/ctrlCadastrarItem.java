@@ -51,7 +51,7 @@ public class ctrlCadastrarItem extends HttpServlet {
 			String numero = request.getParameter("numero");
 			String titulo = request.getParameter("titulo");
 			String data = request.getParameter("data");
-			String tipo = request.getParameter("tipo");
+			String tipo = request.getParameter("tipo-item");
 			
 			SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
 			Session s = sessions.openSession();	
