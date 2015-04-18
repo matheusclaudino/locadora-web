@@ -118,7 +118,7 @@
 	          		<ul class="dropdown-menu" role="menu">
 			            <li><a href="tipo-item.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Tipo Item</a></li>
 			            <li class="divider"></li>
-			            <li><a href="consultarItemTitulo.jsp"><span class="glyphicon glyphicon-search"></span> Consultar Tipo Item</a></li>
+			            <li><a href="consultarTipoItem.jsp"><span class="glyphicon glyphicon-search"></span> Consultar Tipo Item</a></li>
 	         		</ul>
 	        	</li><!-- fim dropdown Tipo Item -->
 	        	
