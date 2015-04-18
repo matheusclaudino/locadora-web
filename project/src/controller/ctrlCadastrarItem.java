@@ -46,7 +46,7 @@ public class ctrlCadastrarItem extends HttpServlet {
 		
 		String operacao = request.getParameter("operacao");
 		
-		if(operacao.equals("inscreveNovoItem")){
+		if(operacao.equals("inscreverNovoItem")){
 			
 			String numero = request.getParameter("numero");
 			String titulo = request.getParameter("titulo");
