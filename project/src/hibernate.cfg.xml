@@ -24,6 +24,8 @@
 <mapping class="model.domain.Categoria" />
 <mapping class="model.domain.TipoItem" />
 <mapping class="model.domain.Item" />
+<mapping class="model.domain.Locacao" />
+<mapping class="model.domain.Pagamento" />
 
 
 </session-factory>
