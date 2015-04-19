@@ -30,15 +30,12 @@ public class Locacao {
 		super();
 	}
 
-	public Locacao(String dataLocacao, String dataDevolucaoPrevista,
-			String dataDevolucao, double valorCobrado, double multaCobrada,
+	public Locacao(String dataLocacao, String dataDevolucaoPrevista, double valorCobrado,
 			Cliente cliente, Item item) {
 		super();
 		this.dataLocacao = dataLocacao;
 		this.dataDevolucaoPrevista = dataDevolucaoPrevista;
-		this.dataDevolucao = dataDevolucao;
 		this.valorCobrado = valorCobrado;
-		this.multaCobrada = multaCobrada;
 		this.cliente = cliente;
 		this.item = item;
 	}
