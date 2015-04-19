@@ -55,3 +55,8 @@ table tr th{
 form textarea{
 	resize: none;
 }
+
+div.row table.scroll{
+	overflow-x: scroll;
+	overflow-y: scroll;
+}
