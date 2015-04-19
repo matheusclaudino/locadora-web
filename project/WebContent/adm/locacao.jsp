@@ -11,7 +11,7 @@
 	</div><!--fim jumbotrom-->
 	
 	<div class="container">
-		<form action="">
+		<form action="../ctrlCadastrarLocacao" method="POST">
 			<div class="row">
 				<fieldset class="col-md-12">
 					<legend>Dados locação</legend>
