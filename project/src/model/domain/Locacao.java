@@ -1,6 +1,11 @@
 package model.domain;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
 @Entity
@@ -17,8 +22,27 @@ public class Locacao {
 	private Cliente cliente;
 	@ManyToOne
 	private Item item;
+	@ManyToMany(cascade = CascadeType.ALL)
+	private Set<Pagamento> pagamentos = new HashSet<Pagamento>();
+
 	
-	
+	public Locacao() {
+		super();
+	}
+
+	public Locacao(String dataLocacao, String dataDevolucaoPrevista,
+			String dataDevolucao, double valorCobrado, double multaCobrada,
+			Cliente cliente, Item item) {
+		super();
+		this.dataLocacao = dataLocacao;
+		this.dataDevolucaoPrevista = dataDevolucaoPrevista;
+		this.dataDevolucao = dataDevolucao;
+		this.valorCobrado = valorCobrado;
+		this.multaCobrada = multaCobrada;
+		this.cliente = cliente;
+		this.item = item;
+	}
+
 	public long getId() {
 		return id;
 	}
@@ -83,5 +107,16 @@ public class Locacao {
 		this.item = item;
 	}
 
+	public Set<Pagamento> getPagamentos() {
+		return pagamentos;
+	}
+
+	public void setPagamentos(Set<Pagamento> pagamentos) {
+		this.pagamentos = pagamentos;
+	}
+
+	public void inserirPagamento(Pagamento p){
+		pagamentos.add(p);
+	}
 	
 }
