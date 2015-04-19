@@ -83,8 +83,6 @@ public class ctrlCadastrarLocacao extends HttpServlet {
 				}
 			}
 			
-			System.out.println("ITEM: " + itemEscolhido.getTipoItem().getNome());
-			
 			session.close();
 			
 			if(applicationLocacao.inscreverNovaLocacao(dataLocacao, dataPrevista, Double.parseDouble(valor), cliente, itemEscolhido) == applicationLocacao.INSCREVER_NOVA_LOCACAO_OK){
