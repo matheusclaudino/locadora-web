@@ -1,7 +1,33 @@
 <%@ include file="import/head.jsp"%>
 
 <%@ include file="import/navbar.jsp"%>
-
+	
+	<%@page import="org.hibernate.cfg.AnnotationConfiguration"%>
+	<%@page import="org.hibernate.SessionFactory"%>
+	<%@page import="org.hibernate.Session"%>
+	<%@page import="org.hibernate.Query"%>
+	<%@page import="java.util.List"%>
+	<%@page import="model.domain.Cliente"%>
+	<%@page import="model.domain.Titulo"%>
+	<%@page import="model.domain.Item"%>
+	
+<%
+	SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
+	Session s = sessions.openSession();
+	
+	String qCliente = "FROM Cliente"; 
+	String qTitulo = "FROM Titulo";
+	String qItem = "FROM TipoItem";
+	
+	Query qryCliente = s.createQuery(qCliente);
+	Query qryTitulo = s.createQuery(qTitulo);
+	Query qryItem = s.createQuery(qItem);
+	
+	List<Cliente> clientes = qryCliente.list();
+	List<Titulo> titulos = qryTitulo.list();
+	List<Item> itens = qryItem.list();
+	
+%>
 	<div class="jumbotrom">
 		<div class="container">
 
