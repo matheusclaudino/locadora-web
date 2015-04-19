@@ -9,7 +9,7 @@
 	<%@page import="java.util.List"%>
 	<%@page import="model.domain.Cliente"%>
 	<%@page import="model.domain.Titulo"%>
-	<%@page import="model.domain.Item"%>
+	<%@page import="model.domain.TipoItem"%>
 	
 <%
 	SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
@@ -17,15 +17,15 @@
 	
 	String qCliente = "FROM Cliente"; 
 	String qTitulo = "FROM Titulo";
-	String qItem = "FROM TipoItem";
+	String qTipoItem = "FROM TipoItem";
 	
 	Query qryCliente = s.createQuery(qCliente);
 	Query qryTitulo = s.createQuery(qTitulo);
-	Query qryItem = s.createQuery(qItem);
+	Query qryTipoItem = s.createQuery(qTipoItem);
 	
 	List<Cliente> clientes = qryCliente.list();
 	List<Titulo> titulos = qryTitulo.list();
-	List<Item> itens = qryItem.list();
+	List<TipoItem> tipoItens = qryTipoItem.list();
 	
 %>
 	<div class="jumbotrom">
@@ -46,19 +46,34 @@
 				<fieldset class="col-sm-6 col-md-6">
 					<div class="form-group">
 						<label for="numero">Número inscrição</label>
-						<input type="text" id="numero" name="numero" class="form-control">
+						<select id="numero" name="numero" class="form-control">
+							<%
+								for(Cliente t: clientes){
+									out.println("<option value=\""+ t.getNumero_inscricao() +"\">"+ t.getNumero_inscricao() + " - " + t.getNome()  +"</option>");
+								}
+							%>
+						</select>
 					</div>
 					
 					<div class="form-group">
 						<label for="titulo">Título</label>
-						<input type="text" id="titulo" name="titulo" class="form-control">
+						<select id="titulo" name="titulo" class="form-control">
+							<%
+								for(Titulo t: titulos){
+									out.println("<option value=\""+ t.getId() +"\">"+ t.getNome() +"</option>");
+								}
+							%>
+						</select>
 					</div>
 					
 					<div class="form-group">
 						<label for="tipo">Tipo item</label>
 						<select id="tipo" name="tipo" class="form-control">
-							<option value="dvd">DVD</option>
-							<option value="fita">Fita</option>
+							<%
+								for(TipoItem t: tipoItens){
+									out.println("<option value=\""+ t.getId() +"\">"+ t.getNome() +"</option>");
+								}
+							%>
 						</select>
 					</div>
 				</fieldset><!-- fim fieldset -->
