@@ -1,11 +1,20 @@
 package controller;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import model.application.applicationLocacao;
+import model.domain.Cliente;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.AnnotationConfiguration;
 
 /**
  * Servlet implementation class ctrlCadastrarLocacao
@@ -42,8 +51,28 @@ public class ctrlCadastrarLocacao extends HttpServlet {
 			String titulo = request.getParameter("titulo");
 			String tipo = request.getParameter("tipo-item");
 			String valor = request.getParameter("valor");
-			String data = request.getParameter("data");
+			String dataLocacao = request.getParameter("data-locacao");
+			String dataPrevista = request.getParameter("data-prevista");
 			
+			SessionFactory s = new AnnotationConfiguration().configure().buildSessionFactory();
+			Session session = s.openSession();
+			
+			String queryCliente = "FROM Cliente WHERE numero_inscricao =" + numero;
+
+			
+			session.beginTransaction();
+			Query qryCliente = session.createQuery(queryCliente);
+
+			Cliente cliente =  (Cliente) qryCliente.uniqueResult();
+
+			
+			session.close();
+			
+			if(applicationLocacao.inscreverNovaLocacao(dataLocacao, dataPrevista, valor, cliente, item) == applicationLocacao.INSCREVER_NOVA_LOCACAO_OK){
+				
+			}else{
+				
+			}
 			
 		}else{
 			
