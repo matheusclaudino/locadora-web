@@ -8,17 +8,20 @@
 	<%@ page import="org.hibernate.cfg.AnnotationConfiguration"%>
 	<%@ page import="java.util.List"%>
 	<%@ page import="model.domain.Titulo"%>
+	<%@ page import="model.domain.TipoItem"%>
 	
 <%
 	SessionFactory sessions =  new AnnotationConfiguration().configure().buildSessionFactory();
 	Session s = sessions.openSession();
 	
 	String qTitulo = "FROM Titulo";
+	String qTipoItem = "FROM TipoItem";
 	
 	Query qryTitulo = s.createQuery(qTitulo);
+	Query qryTipoItem = s.createQuery(qTipoItem);
 	
 	List<Titulo> titulos = qryTitulo.list();
-
+	List<TipoItem> tipoItens = qryTipoItem.list();
 %>
 	<div class="jumbotrom">
 		<div class="container">
@@ -55,10 +58,14 @@
 					
 					<div class="form-group">
 						<label for="tipo">Tipo item</label>
-						<select name="tipo" id="tipo" class="form-control" >
-							<option value="dvd">DVD</option>
-							<option value="fita">Fita</option>
-						</select>
+							<select name="tipo-item" id="tipo" class="form-control">
+								<%
+									//Percorrendo os tipo de itens
+									for(TipoItem t: tipoItens){
+										out.println("<option value=\""+t.getId()+"\">" + t.getNome() + "</option>");	
+									}
+								 %>
+							</select>
 					</div>
 				</fieldset>	
 				<fieldset class="col-sm-6 col-md-6">
