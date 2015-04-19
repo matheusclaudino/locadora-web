@@ -40,6 +40,7 @@
 				
 				<fieldset class="col-sm-6 col-md-6">
 					<div class="form-group">
+						<input type="hidden" name="operacao" value="inscreverNovaLocacao">
 						<label for="numero">Número inscrição</label>
 						<input type="text" id="numero" name="numero" class="form-control">
 					</div>
@@ -79,7 +80,7 @@
 					
 					<div class="form-group">
 						<label for="data">Data prevista devolucao</label>
-						<input type="text" id="data" name="data" class="form-control">
+							<input type="date" id="data" name="data" class="form-control">
 					</div>
 				</fieldset>
 				<%s.close(); %>
