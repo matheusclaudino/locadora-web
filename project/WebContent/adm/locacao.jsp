@@ -22,6 +22,8 @@
 	
 	List<Titulo> titulos = qryTitulo.list();
 	List<TipoItem> tipoItens = qryTipoItem.list();
+	
+	s.close(); 
 %>
 	<div class="jumbotrom">
 		<div class="container">
@@ -88,7 +90,6 @@
 							<input type="date" id="data-prevista" name="data-prevista" class="form-control">
 					</div>
 				</fieldset>
-				<%s.close(); %>
 			</div><!-- fim row -->
 			<button type="submit" class="btn btn-primary btn-lg pull-left">
 				<span class="glyphicon glyphicon-floppy-disk"></span>

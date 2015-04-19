@@ -37,6 +37,7 @@
 	List<Distribuidor> distribuidores = qryDistribuidor.list();
 	List<Categoria> categorias = qryCategoria.list();
 	
+	s.close(); 
 %>
 	<div class="jumbotrom">
 		<div class="container">
@@ -137,7 +138,6 @@
 							</table>	
 							
 						</fieldset><!-- fim fieldset table -->
-						<%s.close();%>
 					</div><!--fim row-->
 					<button type="submit" class="btn btn-primary btn-lg pull-left">
 						<span class="glyphicon glyphicon-floppy-disk"></span>

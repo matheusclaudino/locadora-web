@@ -27,6 +27,7 @@
 	List<Titulo> titulos = qryTitulo.list();
 	List<TipoItem> tipoItens = qryTipoItem.list();
 	
+	s.close();
 %>
 	<div class="jumbotrom">
 		<div class="container">
