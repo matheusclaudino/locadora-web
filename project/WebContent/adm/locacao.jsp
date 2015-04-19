@@ -79,8 +79,13 @@
 					</div>
 					
 					<div class="form-group">
-						<label for="data">Data prevista devolucao</label>
-							<input type="date" id="data" name="data" class="form-control">
+						<label for="data-locacao">Data locação</label>
+							<input type="date" id="data-locacao" name="data-locacao" class="form-control">
+					</div>
+					
+					<div class="form-group">
+						<label for="data-prevista">Data prevista devolucao</label>
+							<input type="date" id="data-prevista" name="data-prevista" class="form-control">
 					</div>
 				</fieldset>
 				<%s.close(); %>
