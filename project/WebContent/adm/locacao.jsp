@@ -2,6 +2,24 @@
 	
 <%@ include file="import/navbar.jsp"%>
 
+	<%@ page import="org.hibernate.Session"%>
+	<%@ page import="org.hibernate.SessionFactory"%>
+	<%@ page import="org.hibernate.Query"%>
+	<%@ page import="org.hibernate.cfg.AnnotationConfiguration"%>
+	<%@ page import="java.util.List"%>
+	<%@ page import="model.domain.Titulo"%>
+	
+<%
+	SessionFactory sessions =  new AnnotationConfiguration().configure().buildSessionFactory();
+	Session s = sessions.openSession();
+	
+	String qTitulo = "FROM Titulo";
+	
+	Query qryTitulo = s.createQuery(qTitulo);
+	
+	List<Titulo> titulos = qryTitulo.list();
+
+%>
 	<div class="jumbotrom">
 		<div class="container">
 
@@ -25,7 +43,14 @@
 					
 					<div class="form-group">
 						<label for="titulo">Título</label>
-						<input type="text" id="titulo" name="titulo" class="form-control">
+						<select name="titulo" id="titulo" class="form-control" >
+							<%
+								//Percorrendo os titulos
+								for(Titulo t: titulos){
+									out.println("<option value=\""+t.getId()+"\">" + t.getNome() + "</option>");
+								}
+							%>
+						</select>
 					</div>
 					
 					<div class="form-group">
@@ -50,6 +75,7 @@
 						<input type="text" id="data" name="data" class="form-control">
 					</div>
 				</fieldset>
+				<%s.close(); %>
 			</div><!-- fim row -->
 			<button type="submit" class="btn btn-primary btn-lg pull-left">
 				<span class="glyphicon glyphicon-floppy-disk"></span>
