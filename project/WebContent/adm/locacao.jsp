@@ -95,7 +95,7 @@
 				Salvar
 			</button>
 			
-			<a href="pagamento.html">
+			<a href="pagamento.jsp">
 				<button type="button" class="btn btn-success btn-lg pull-left">
 					<span class="glyphicon glyphicon-usd"></span>
 					Efetuar Pagamento
