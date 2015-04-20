@@ -9,6 +9,7 @@ import model.domain.Diretor;
 import model.domain.Distribuidor;
 import model.domain.Titulo;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
@@ -38,5 +39,18 @@ public class applicationTitulo {
 		session.close();
 		
 		return INSCREVER_NOVO_TITULO_OK;
+	}
+	
+	public static Titulo getTitulo(int id){
+		SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
+		Session session = sessions.openSession();
+		
+		String qTitulo = "FROM Titulo WHERE id =" + id;
+		
+		Query qryTitulo = session.createQuery(qTitulo);
+		
+		Titulo ti = (Titulo) qryTitulo.uniqueResult();
+		
+		return ti;
 	}
 }
