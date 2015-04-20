@@ -46,6 +46,7 @@
 				
 				<fieldset class="col-sm-6 col-md-6">
 					<div class="form-group">
+						<input type="hidden" name="operacao" value="inscreverNovaReserva">
 						<label for="numero">Número inscrição</label>
 						<select id="numero" name="numero" class="form-control">
 							<%
