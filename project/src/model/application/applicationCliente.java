@@ -1,11 +1,13 @@
 package model.application;
 
+import model.domain.Cliente;
+import model.domain.Dependente;
+import model.domain.Socio;
+
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
-
-import model.domain.Dependente;
-import model.domain.Socio;
 
 public class applicationCliente {
 	
@@ -55,5 +57,17 @@ public class applicationCliente {
 		
 		return INSCREVER_NOVO_DEPENDENTE_OK;
 	}
-
+	
+	public static Cliente getCliente(int id){
+		SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
+		Session session = sessions.openSession();
+		
+		String qCliente = "FROM Cliente WHERE numero_inscricao =" + id;
+		
+		Query qryCliente = session.createQuery(qCliente);
+		
+		Cliente cli = (Cliente) qryCliente.uniqueResult();
+		
+		return cli;
+	}
 }
