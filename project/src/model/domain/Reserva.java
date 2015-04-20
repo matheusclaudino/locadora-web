@@ -22,6 +22,22 @@ public class Reserva {
 	private TipoItem tipoItem;
 	
 	
+	public Reserva() {
+		super();
+	}
+	
+	
+	public Reserva(String data, String hora, Cliente cliente, Titulo titulo,
+			TipoItem tipoItem) {
+		super();
+		this.data = data;
+		this.hora = hora;
+		this.cliente = cliente;
+		this.titulo = titulo;
+		this.tipoItem = tipoItem;
+	}
+
+
 	public long getId() {
 		return id;
 	}
