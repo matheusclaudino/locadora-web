@@ -1,7 +1,9 @@
 package model.application;
 
 import model.domain.TipoItem;
+import model.domain.Titulo;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
@@ -25,5 +27,18 @@ public class applicationTipoItem {
 		s.close();
 		
 		return INSCREVER_NOVO_TIPO_ITEM_OK;
+	}
+	
+	public static TipoItem getTipoItem(int id){
+		SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
+		Session session = sessions.openSession();
+		
+		String qTipoItem = "FROM TipoItem WHERE id =" + id;
+		
+		Query qryTipoItem = session.createQuery(qTipoItem);
+		
+		TipoItem tip = (TipoItem) qryTipoItem.uniqueResult();
+		
+		return tip;
 	}
 }
