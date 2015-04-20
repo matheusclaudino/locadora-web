@@ -11,6 +11,8 @@ public class Reserva {
 	@Id
 	@GeneratedValue
 	private long id;
+	private String data;
+	private String hora;
 	
 	@ManyToOne
 	private Cliente cliente;
