@@ -38,7 +38,7 @@
 	</div><!--fim jumbotrom-->
 	
 	<div class="container">
-		<form>
+		<form action="../ctrlCadastrarReserva" method="POST">
 			<div class="row">
 				<fieldset class="col-md-12">
 					<legend>Dados reserva</legend>
