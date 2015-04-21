@@ -52,6 +52,8 @@ public class applicationTitulo {
 		
 		Titulo ti = (Titulo) qryTitulo.uniqueResult();
 		
+		session.close();
+		
 		return ti;
 	}
 	
@@ -66,6 +68,8 @@ public class applicationTitulo {
 		Query qryTitulo = session.createQuery(qTitulo);
 		
 		titulos = (List<Titulo>) qryTitulo.list();
+		
+		session.close();
 		
 		return titulos;
 	}

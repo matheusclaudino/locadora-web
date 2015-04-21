@@ -40,6 +40,8 @@ public class applicationTipoItem {
 		
 		TipoItem tip = (TipoItem) qryTipoItem.uniqueResult();
 		
+		session.close();
+		
 		return tip;
 	}
 	
@@ -54,6 +56,8 @@ public class applicationTipoItem {
 		Query qryTipoItem = session.createQuery(qTipoItem);
 		
 		tipos = (List<TipoItem>) qryTipoItem.list();
+		
+		session.close();
 		
 		return tipos;
 	}

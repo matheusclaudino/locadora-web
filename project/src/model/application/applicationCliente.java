@@ -70,6 +70,8 @@ public class applicationCliente {
 		
 		Cliente cli = (Cliente) qryCliente.uniqueResult();
 		
+		session.close();
+		
 		return cli;
 	}
 	
@@ -84,6 +86,8 @@ public class applicationCliente {
 		Query qrySocios = session.createQuery(qSocios);
 		
 		socios = (List<Socio>) qrySocios.list();
+		
+		session.close();
 		
 		return socios;
 	}
