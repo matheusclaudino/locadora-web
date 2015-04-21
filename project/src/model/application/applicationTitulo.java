@@ -1,5 +1,6 @@
 package model.application;
 
+import java.util.List;
 import java.util.Set;
 
 import model.domain.Ator;
@@ -52,5 +53,20 @@ public class applicationTitulo {
 		Titulo ti = (Titulo) qryTitulo.uniqueResult();
 		
 		return ti;
+	}
+	
+	public static List<Titulo> getTitulos(){
+		List<Titulo> titulos;
+		
+		SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
+		Session session = sessions.openSession();
+		
+		String qTitulo = "FROM Titulo";
+		
+		Query qryTitulo = session.createQuery(qTitulo);
+		
+		titulos = (List<Titulo>) qryTitulo.list();
+		
+		return titulos;
 	}
 }
