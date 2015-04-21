@@ -1,7 +1,11 @@
 package model.application;
 
+import java.util.List;
+
+import model.domain.Categoria;
 import model.domain.Diretor;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
@@ -26,5 +30,22 @@ public class applicationDiretor {
 		session.close();
 		
 		return INSCREVER_NOVO_DIRETOR_OK;
+	}
+	
+	public static List<Diretor> getDiretores(){
+		List<Diretor> diretores;
+		
+		SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
+		Session session = sessions.openSession();
+
+		String qDiretores  = "FROM Diretor";
+		
+		Query qryDiretores = session.createQuery(qDiretores);
+		
+		diretores = (List<Diretor>) qryDiretores.list();
+		
+		session.close();
+		
+		return diretores;
 	}
 }
