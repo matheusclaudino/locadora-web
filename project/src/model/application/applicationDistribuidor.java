@@ -1,10 +1,13 @@
 package model.application;
 
+import java.util.List;
+
+import model.domain.Distribuidor;
+
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
-
-import model.domain.Distribuidor;
 
 public class applicationDistribuidor {
 	
@@ -26,5 +29,21 @@ public class applicationDistribuidor {
 		session.close();
 		
 		return INSCREVER_NOVO_DISTRIBUIDOR_OK;
+	}
+	
+	public static List<Distribuidor> getDistribuidores(){
+		List<Distribuidor> distribuidores;
+		
+		SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
+		Session session = sessions.openSession();
+
+		String qDistribuidores  = "FROM Distribuidores";
+		
+		Query qryDistribuidores = session.createQuery(qDistribuidores);
+		
+		distribuidores = (List<Distribuidor>) qryDistribuidores.list();
+		
+		
+		return distribuidores;
 	}
 }
