@@ -91,4 +91,21 @@ public class applicationCliente {
 		
 		return socios;
 	}
+	
+	public static List<Cliente> getClientes(){
+		List<Cliente> clientes;
+		
+		SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
+		Session session = sessions.openSession();
+		
+		String qClientes = "FROM Cliente";
+		
+		Query qryClientes = session.createQuery(qClientes);
+		
+		clientes = (List<Cliente>) qryClientes.list();
+		
+		session.close();
+		
+		return clientes;
+	}
 }
