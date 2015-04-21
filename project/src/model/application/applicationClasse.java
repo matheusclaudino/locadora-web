@@ -45,5 +45,7 @@ public class applicationClasse {
 		classes = (List<Classe>) qryClasses.list();
 		
 		session.close();
+		
+		return classes;
 	}
 }
