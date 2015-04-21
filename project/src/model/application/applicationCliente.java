@@ -1,5 +1,7 @@
 package model.application;
 
+import java.util.List;
+
 import model.domain.Cliente;
 import model.domain.Dependente;
 import model.domain.Socio;
@@ -69,5 +71,20 @@ public class applicationCliente {
 		Cliente cli = (Cliente) qryCliente.uniqueResult();
 		
 		return cli;
+	}
+	
+	public static List<Socio> getSocios(){
+		List<Socio> socios;
+		
+		SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
+		Session session = sessions.openSession();
+		
+		String qSocios = "FROM Cliente WHERE DTYPE = Socio";
+		
+		Query qrySocios = session.createQuery(qSocios);
+		
+		socios = (List<Socio>) qrySocios.list();
+		
+		return socios;
 	}
 }
