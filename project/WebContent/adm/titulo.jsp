@@ -1,3 +1,8 @@
+<%@page import="model.application.applicationCategoria"%>
+<%@page import="model.application.applicationDistribuidor"%>
+<%@page import="model.application.applicationDiretor"%>
+<%@page import="model.application.applicationClasse"%>
+<%@page import="model.application.applicationAtor"%>
 <%@ include file="import/head.jsp"%>
 
 <%@ include file="import/navbar.jsp"%>
@@ -14,30 +19,12 @@
 	<%@ page import="model.domain.Distribuidor"%>
 	<%@ page import="model.domain.Categoria"%>
 	
-<%
-	SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
-	Session s = sessions.openSession();
-	
-	String queryAtor = "from Ator";
-	String queryClasse = "from Classe";
-	String queryDiretor = "from Diretor";
-	String queryDistribuidor = "from Distribuidor";
-	String queryCategoria = "from Categoria";
-	
-	s.beginTransaction();
-	Query qryAtor = s.createQuery(queryAtor);
-	Query qryClasse = s.createQuery(queryClasse);
-	Query qryDiretor = s.createQuery(queryDiretor);
-	Query qryDistribuidor = s.createQuery(queryDistribuidor);
-	Query qryCategoria = s.createQuery(queryCategoria);
-	
-	List<Ator> atores = qryAtor.list();
-	List<Classe> classes =  qryClasse.list();
-	List<Diretor> diretores = qryDiretor.list();
-	List<Distribuidor> distribuidores = qryDistribuidor.list();
-	List<Categoria> categorias = qryCategoria.list();
-	
-	s.close(); 
+<%	
+	List<Ator> atores = applicationAtor.getAtores();
+	List<Classe> classes =  applicationClasse.getClasses();
+	List<Diretor> diretores = applicationDiretor.getDiretores();
+	List<Distribuidor> distribuidores = applicationDistribuidor.getDistribuidores();
+	List<Categoria> categorias = applicationCategoria.getCategorias();
 %>
 	<div class="jumbotrom">
 		<div class="container">
