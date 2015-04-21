@@ -3,9 +3,7 @@
 <%@ include file="import/navbar.jsp"%>
 
 <%@ page import="model.domain.Socio"%>
-<%@ page import="model.domain.Cliente"%>
 <%@page import="model.application.applicationCliente"%>
-<%@ page import="java.util.Iterator"%>
 <%@ page import="java.util.List"%>
 
 	<div class="jumbotrom">
@@ -29,14 +27,10 @@
 						<label for="socio">Sócio</label>
 						<select id="socio" name="idSocio" class="form-control">
 							<%
-								Iterator i = socios.iterator();
-								while (i.hasNext()){
-							
-								Cliente c = (Cliente)i.next();
-							%>	
-							 <option value="<%out.println(c.getNumero_inscricao());%>"><%out.println(c.getNome());%></option>
-							
-							<%}%>
+								for(Socio s: socios){
+							 		out.println("<option value=\"" + s.getNumero_inscricao() + "\">" + s.getNome() + "</option>");
+								}
+							%>
 						</select>
 					</div> 
 				</fieldset>
