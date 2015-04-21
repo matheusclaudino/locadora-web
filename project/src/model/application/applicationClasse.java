@@ -1,10 +1,14 @@
 package model.application;
 
+import java.util.List;
+
+import model.domain.Ator;
+import model.domain.Classe;
+
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
-
-import model.domain.Classe;
 
 public class applicationClasse {
 
@@ -26,5 +30,20 @@ public class applicationClasse {
 		session.close();
 		
 		return INSCREVER_NOVA_CLASSE_OK;
+	}
+	
+	public static List<Classe> getClasses(){
+		List<Classe> classes;
+		
+		SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
+		Session session = sessions.openSession();
+
+		String qClasses  = "FROM Classe";
+		
+		Query qryClasses = session.createQuery(qClasses);
+		
+		classes = (List<Classe>) qryClasses.list();
+		
+		session.close();
 	}
 }
