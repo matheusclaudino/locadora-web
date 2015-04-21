@@ -33,13 +33,13 @@
 				</fieldset><!-- fim fieldset -->
 			</div><!-- fim row -->	
 			
-			<button type="submit" class="btn btn-default btn-lg btn-left">
+			<button type="submit" class="btn btn-primary btn-lg btn-left">
 				<span class="glyphicon glyphicon-floppy-disk"></span>
 				Salvar
 			</button>
 			
 			<a href="../index.html">	
-				<button type="button" class="btn btn-default btn-lg btn-left">
+				<button type="button" class="btn btn-danger btn-lg btn-left">
 				<span class="glyphicon glyphicon-remove"></span>	
 					Cancelar
 				</button>

@@ -56,12 +56,12 @@
 							
 						</fieldset>	<!--fim fieldset-->
 					</div><!--fim row-->
-					<button type="submit" class="btn btn-default btn-lg pull-left">
+					<button type="submit" class="btn btn-success btn-lg pull-left">
 						<span class="glyphicon glyphicon-usd" ></span>
 						Efetuar Pagamento
 					</button>
 					<a href="../index">
-						<button type="button" class="btn btn-default btn-lg pull-left">
+						<button type="button" class="btn btn-danger btn-lg pull-left">
 							<span class="glyphicon glyphicon-remove"></span>
 							Cancelar
 						</button>
