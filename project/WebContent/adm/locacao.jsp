@@ -1,3 +1,6 @@
+<%@page import="model.application.applicationTipoItem"%>
+<%@page import="model.application.applicationItem"%>
+<%@page import="model.application.applicationTitulo"%>
 <%@include file="import/head.jsp" %>
 	
 <%@ include file="import/navbar.jsp"%>
@@ -11,19 +14,8 @@
 	<%@ page import="model.domain.TipoItem"%>
 	
 <%
-	SessionFactory sessions =  new AnnotationConfiguration().configure().buildSessionFactory();
-	Session s = sessions.openSession();
-	
-	String qTitulo = "FROM Titulo";
-	String qTipoItem = "FROM TipoItem";
-	
-	Query qryTitulo = s.createQuery(qTitulo);
-	Query qryTipoItem = s.createQuery(qTipoItem);
-	
-	List<Titulo> titulos = qryTitulo.list();
-	List<TipoItem> tipoItens = qryTipoItem.list();
-	
-	s.close(); 
+	List<Titulo> titulos = applicationTitulo.getTitulos();
+	List<TipoItem> tipoItens = applicationTipoItem.getTipos(); 
 %>
 	<div class="jumbotrom">
 		<div class="container">
