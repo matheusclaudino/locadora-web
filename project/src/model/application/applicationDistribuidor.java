@@ -37,7 +37,7 @@ public class applicationDistribuidor {
 		SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
 		Session session = sessions.openSession();
 
-		String qDistribuidores  = "FROM Distribuidores";
+		String qDistribuidores  = "FROM Distribuidor";
 		
 		Query qryDistribuidores = session.createQuery(qDistribuidores);
 		
