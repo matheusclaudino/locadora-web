@@ -1,7 +1,8 @@
 package model.application;
 
+import java.util.List;
+
 import model.domain.TipoItem;
-import model.domain.Titulo;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -40,5 +41,20 @@ public class applicationTipoItem {
 		TipoItem tip = (TipoItem) qryTipoItem.uniqueResult();
 		
 		return tip;
+	}
+	
+	public static List<TipoItem> getTipos(){
+		List<TipoItem> tipos;
+		
+		SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
+		Session session = sessions.openSession();
+		
+		String qTipoItem = "FROM TipoItem";
+		
+		Query qryTipoItem = session.createQuery(qTipoItem);
+		
+		tipos = (List<TipoItem>) qryTipoItem.list();
+		
+		return tipos;
 	}
 }
