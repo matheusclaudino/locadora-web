@@ -1,8 +1,12 @@
 package model.application;
 
+import java.util.List;
+
 import model.domain.Ator;
+import model.domain.Cliente;
 import model.domain.Socio;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
@@ -28,6 +32,23 @@ public class applicationAtor {
 		
 		
 		return INSCREVER_NOVO_ATOR_OK;
+	}
+	
+	public static List<Ator> getAtores(){
+		List<Ator> atores;
+		
+		SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
+		Session session = sessions.openSession();
+
+		String qAtores  = "FROM Ator";
+		
+		Query qryAtores = session.createQuery(qAtores);
+		
+		atores = (List<Ator>) qryAtores.list();
+		
+		session.close();
+		
+		return atores;
 	}
 
 }
