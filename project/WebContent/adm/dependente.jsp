@@ -2,13 +2,9 @@
 
 <%@ include file="import/navbar.jsp"%>
 
-
-<%@ page import="org.hibernate.Session"%>
-<%@ page import="org.hibernate.SessionFactory"%>
-<%@ page import="org.hibernate.Query"%>
-<%@ page import="org.hibernate.cfg.AnnotationConfiguration"%>
-<%@ page import="model.domain.Cliente"%>
 <%@ page import="model.domain.Socio"%>
+<%@ page import="model.domain.Cliente"%>
+<%@page import="model.application.applicationCliente"%>
 <%@ page import="java.util.Iterator"%>
 <%@ page import="java.util.List"%>
 
@@ -26,16 +22,7 @@
 	 			<input type="hidden" name="operacao" value="inscreverNovoDependente">
 
 				<%
-					SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
-					Session s = sessions.openSession();
-					
-					//Listagem de socios
-					String strQuery = "from Cliente as cli where cli.class=Socio";
-					
-					s.beginTransaction();
-					Query qr = s.createQuery(strQuery);
-					
-					List socios = qr.list();
+					List<Socio> socios = applicationCliente.getSocios();
 				%>
 				<fieldset class="col-md-6">
 					<div class="form-group">
