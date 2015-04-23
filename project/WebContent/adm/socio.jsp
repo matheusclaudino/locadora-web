@@ -32,7 +32,7 @@
 					
 					<div class="form-group">
 						<label for="telefone">Telefone</label>
-						<input type="tel" id="telefone" name="telefone" class="form-control">
+						<input type="tel" pattern="^\d{2}-\d{5}-\d{4}$" id="telefone" name="telefone" class="form-control" placeholder="(XX)XXXXX-XXXX">
 					</div>
 					
 					
@@ -49,7 +49,7 @@
 					
 					<div class="form-group">
 						<label for="cpf">CPF</label>
-						<input type="text" id="cpf" name="cpf" class="form-control" placeholder="000.000.000-00">
+						<input type="text"  pattern="^\d{3}.\d{3}.\d{3}-\{2}$" id="cpf" name="cpf" class="form-control" placeholder="000.000.000-00">
 					</div>
 					
 					<div>
