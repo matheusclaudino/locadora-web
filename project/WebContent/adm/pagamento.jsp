@@ -19,6 +19,7 @@
 				
 				<fieldset class="col-sm-6 col-md-6">
 					<div class="form-group">
+						<input type="hidden" name="operacao" value="inscreverNovoPagamento">
 						<label for="data">Data pagamento</label>
 						<input type="text" id="data" name="data" class="form-control" placeholder="dd/mm/aaaa">
 					</div>
