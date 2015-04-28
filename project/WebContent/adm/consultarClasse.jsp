@@ -57,7 +57,7 @@
 													+ "<td>" + c.getNome() + "</td>"
 													+ "<td>" + c.getValor() + "</td>"
 													+ "<td>" + c.getPrazoDevolucao() + "</td>"
-													+ "<td ><span class=\"btn btn-primary glyphicon glyphicon-refresh\"></span></td>"
+													+ "<td ><a href=\"alterarClasse.jsp?idClasse=\"" + c.getId() + "\"><span class=\"btn btn-primary glyphicon glyphicon-refresh\"></span></a></td>"
 													+ "<td><span class=\"btn btn-danger glyphicon glyphicon-trash\"></span></td>"
 											+ "</tr>");
 									
