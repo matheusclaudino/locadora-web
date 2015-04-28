@@ -33,7 +33,16 @@ public class ctrlCadastrarPagamento extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		String operacao = request.getParameter("operacao");
+		
+		if(operacao.equals("inscreverNovoPagamento")){
+			
+			String valor = request.getParameter("valor");
+			
+			
+		}else{
+			
+		}
 	}
 
 }
