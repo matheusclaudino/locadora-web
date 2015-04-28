@@ -2,6 +2,12 @@
 	
 <%@ include file="import/navbar.jsp"%>
 
+	<%@page import="model.application.applicationClasse"%>
+	<%@page import="model.domain.Classe"%>
+	<%@page import="java.util.List"%>>
+<%
+	List<Classe> classes = applicationClasse.getClasses();
+%>
 	<div class="jumbotrom">
 		<div class="container">
 
@@ -46,42 +52,19 @@
 							<th>EXCLUIR</th>
 						</tr>
 						<tr>
-							<td ></td>
-							<td></td>
-							<td></td>
-							<td ><span class="btn btn-primary glyphicon glyphicon-refresh"></span></td>
-							<td><span class="btn btn-danger glyphicon glyphicon-trash"></span></td>	
-						</tr>
-						<tr>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><span class="btn btn-primary glyphicon glyphicon-refresh"></span></td>
-							<td><span class="btn btn-danger glyphicon glyphicon-trash"></span></td>	
-						</tr>
-						<tr>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><span class="btn btn-primary glyphicon glyphicon-refresh"></span></td>
-							<td><span class="btn btn-danger glyphicon glyphicon-trash"></span></td>	
-						</tr>
-						<tr>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><span class="btn btn-primary glyphicon glyphicon-refresh"></span></td>
-							<td><span class="btn btn-danger glyphicon glyphicon-trash"></span></td>	
-						</tr>
-						<tr>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td><span class="btn btn-primary glyphicon glyphicon-refresh"></span></td>
-							<td><span class="btn btn-danger glyphicon glyphicon-trash"></span></td>	
+							<% for(Classe c: classes){
+									out.println("<tr>"
+													+ "<td>" + c.getNome() + "</td>"
+													+ "<td>" + c.getValor() + "</td>"
+													+ "<td>" + c.getPrazoDevolucao() + "</td>"
+													+ "<td ><span class=\"btn btn-primary glyphicon glyphicon-refresh\"></span></td>"
+													+ "<td><span class=\"btn btn-danger glyphicon glyphicon-trash\"></span></td>"
+											+ "</tr>");
+									
+								}
+							%>	
 						</tr>
 					</table>
-				
 			</div>
 		</form>
 	</div>
