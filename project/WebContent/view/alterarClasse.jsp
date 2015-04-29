@@ -1,6 +1,6 @@
-<%@ include file="import/head.jsp" %>
-
-<%@ unclude file="import/navbar.jsp" %>
+<%@include file="import/head.jsp" %>
+	
+<%@ include file="import/navbar.jsp"%>
 
 	<div class="jumbotrom">
 		<div class="container">
@@ -16,12 +16,12 @@
 						<fieldset class="col-md-12">
 							<legend>Dados classe</legend>
 						</fieldset>
-						
+						<p> ID: ${param.id}</p>
 						<fieldset class="col-md-6">
 							<div class="form-group">
-								<input type="hidden" name="operacao" value="inscreverNovaClasse">
+								<input type="hidden" name="operacao" value="alterarClasse">
 								<label for="nome">Nome completo</label>
-								<input type="text" class="form-control" id="nome" name="nome" autofocus>	
+								<input type="text" class="form-control" id="nome" name="nome" value="${param.nome}" autofocus>	
 							</div>
 
 							<div class="form-group">
@@ -29,14 +29,14 @@
 								
 								<div class="input-group">
 									<span class="input-group-addon">R$</span>
-									<input type="text" class="form-control" id="valor-locacao" name="valor-locacao" 
+									<input type="text" class="form-control" id="valor-locacao" name="valor-locacao" value="${param.valor}" 
 										placeholder="00.00">
 								</div>
 							</div>
 
 							<div class="form-group">
 								<label for="prazo">Prazo devolução</label>
-								<input type="text" class="form-control" id="prazo" name="prazo" 
+								<input type="text" class="form-control" id="prazo" name="prazo" value="${param.prazo}" 
 									placeholder="Dias">
 							</div>
 						</fieldset>	<!--fim fieldset-->
