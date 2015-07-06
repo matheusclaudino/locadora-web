@@ -27,7 +27,7 @@ public class applicationDistribuidor {
 		session.save(d);
 		session.getTransaction().commit();
 		session.close();
-		
+		System.out.println("CADASTROU!");
 		return INSCREVER_NOVO_DISTRIBUIDOR_OK;
 	}
 	

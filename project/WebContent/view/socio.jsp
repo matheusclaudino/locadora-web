@@ -49,7 +49,7 @@
 					
 					<div class="form-group">
 						<label for="cpf">CPF</label>
-						<input type="text"  pattern="^\d{3}.\d{3}.\d{3}-\{2}$" id="cpf" name="cpf" class="form-control" placeholder="000.000.000-00">
+						<input type="text"  id="cpf" name="cpf" class="form-control" placeholder="000.000.000-00">
 					</div>
 					
 					<div>

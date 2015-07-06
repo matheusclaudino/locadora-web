@@ -2,6 +2,14 @@
 	
 <%@ include file="import/navbar.jsp"%>
 
+<script>
+	retorno = ${param.retorno}
+	if (retorno == 1)
+		alert('Distribuidora cadastrada');
+	else
+		alert('Erro no cadastro');
+</script>
+
 	<div class="jumbotrom">
 		<div class="container">
 

@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -38,17 +39,29 @@ public class ctrlCadastrarDistribuidor extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String operacao = request.getParameter("operacao");
+		PrintWriter out = response.getWriter();
 		
 		if(operacao.equals("inscreverNovoDistribuidor")){
 			
 			String cnpj = request.getParameter("cnpj");
 			String razao = request.getParameter("razao");
+			String redirectUrl;
 			
+			System.out.println("CADASTRO >>>>>> :"+applicationDistribuidor.inscreverNovoDistribuidor(Long.parseLong(cnpj), razao));
+			System.out.println("RETORNO >>>>>>:"+applicationDistribuidor.INSCREVER_NOVO_DISTRIBUIDOR_OK);
 			if(applicationDistribuidor.inscreverNovoDistribuidor(Long.parseLong(cnpj), razao) == applicationDistribuidor.INSCREVER_NOVO_DISTRIBUIDOR_OK){
-				
+				//redirectUrl = "../view/distribuidor.jsp?retorno=1";
+				//response.sendRedirect("http://localhost:8080/LocadoraProject/view/distribuidor.jsp?retorno=1");
+				System.out.println(">>>>>>>>LINK: ");
+
 			}else{
-				
+				//redirectUrl = "../view/distribuidor.jsp?retorno=0";
+				//response.sendRedirect("http://localhost:8080/LocadoraProject/view/distribuidor.jsp?retorno=0");
+				System.out.println(">>>>>>>>LINK AAAAA: ");
 			}
+			
+			
+			
 		}else{
 			
 		}
