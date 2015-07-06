@@ -48,4 +48,20 @@ public class applicationClasse {
 		
 		return classes;
 	}
+	
+	public static Classe getId(String idClasse){
+	    SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
+	    Session session = sessions.openSession();
+
+	    String qClasse = "FROM Classe WHERE id = " + idClasse;
+	    
+	    session.beginTransaction();
+	    
+	    Query qry = session.createQuery(qClasse);
+	    Classe c = (Classe) qry.uniqueResult();
+	    
+	    session.close();
+
+	    return c;
+	}
 }
