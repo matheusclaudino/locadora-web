@@ -8,6 +8,7 @@ import model.domain.Classe;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.cfg.AnnotationConfiguration;
 
 public class applicationClasse {
@@ -64,4 +65,19 @@ public class applicationClasse {
 
 	    return c;
 	}
+	public static int alterar(Classe c){
+        try{
+            SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
+            Session session = sessions.openSession();
+            
+            Transaction t = session.beginTransaction();
+            session.update(c);
+            t.commit();
+            session.close();
+            
+        } catch (Exception x) {
+            return -1;
+        }
+        return 0;
+    }
 }
