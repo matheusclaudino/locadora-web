@@ -5,41 +5,32 @@
 	<div class="jumbotrom">
 		<div class="container">
 
-			<h1><span class="fa fa-list-ol"></span> Alterar Classe</h1>
+			<h1><span class="fa fa fa-truck"></span> Alterar Distribuidor</h1>
 		
 		</div>
 	</div><!--fim jumbotrom-->
 	
 	<div class="container">
-				<form action="../ctrlCadastrarClasse" method="POST">
+				<form action="../ctrlCadastrarDistribuidor" method="POST">
 					<div class="row">
 						<fieldset class="col-md-12">
 							<legend>Dados classe</legend>
 						</fieldset>
-						<p> ID: ${param.id}</p>
 						<fieldset class="col-md-6">
 							<div class="form-group">
-								<input type="hidden" name="idClasse" value="${param.id}">
-								<input type="hidden" name="operacao" value="alterarClasse">
-								<label for="nome">Nome completo</label>
-								<input type="text" class="form-control" id="nome" name="nome" value="${param.nome}" autofocus>	
+								<input type="hidden" name="operacao" value="alterar">
+								<label for="razao">Razão social</label>
+								<input type="text" class="form-control" id="razao" name="razao" value="${param.razao}" autofocus>	
 							</div>
 
 							<div class="form-group">
-								<label for="valor-locacao"> Valor locação</label>
-								
 								<div class="input-group">
-									<span class="input-group-addon">R$</span>
-									<input type="text" class="form-control" id="valor-locacao" name="valor-locacao" value="${param.valor}" 
-										placeholder="00.00">
+								<label for="cnpj"> CNPJ</label>
+								<input type="text" class="form-control" id="cnpj" name="cnpj"  value="${param.cnpj}"
+										placeholder="00.000.000/0000-00">
 								</div>
 							</div>
 
-							<div class="form-group">
-								<label for="prazo">Prazo devolução</label>
-								<input type="text" class="form-control" id="prazo" name="prazo" value="${param.prazo}" 
-									placeholder="Dias">
-							</div>
 						</fieldset>	<!--fim fieldset-->
 					</div><!--fim row-->
 					<button type="submit" class="btn btn-primary btn-lg pull-left">

@@ -22,7 +22,7 @@
 	          		<ul class="dropdown-menu" role="menu">	
 						<li><a href="distribuidor.jsp"><span class="glyphicon glyphicon-plus"></span> Incluir Distribuidor</a></li>
 						<li class="divider"></li>
-			            <li><a href="consultarDistribuirdor.jsp"><span class="glyphicon glyphicon-search"></span> Consultar Distribuidor</a></li>
+			            <li><a href="consultarDistribuidor.jsp"><span class="glyphicon glyphicon-search"></span> Consultar Distribuidor</a></li>
 					</ul>
 				</li><!-- fim dropdown Distribuidor -->
 					

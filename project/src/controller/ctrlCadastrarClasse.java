@@ -42,21 +42,19 @@ public class ctrlCadastrarClasse extends HttpServlet {
 			String prazo = request.getParameter("prazo");
 			
 			if(applicationClasse.inscreverNovaClasse(nome, Double.parseDouble(valor), Integer.parseInt(prazo)) == applicationClasse.INSCREVER_NOVA_CLASSE_OK){
-				
+				response.sendRedirect("view/consultarClasse.jsp?erro=0");
 			}else{
-				
+				response.sendRedirect("view/consultarClasse.jsp?erro=-1");
 			}
 			
 			
 		}else if(operacao.equals("alterarClasse")){
 			//response.sendRedirect("http://localhost:8080/LocadoraProject/view/classe.jsp?retorno=0");
 			Classe c =  applicationClasse.getId(request.getParameter("idClasse"));
-		    out.println("<html><p>ID: " + c.getId()+ "</p></html>");
 			
             c.setNome(request.getParameter("nome"));
             c.setValor(Float.parseFloat(request.getParameter("valor-locacao")));
             c.setPrazoDevolucao(Integer.parseInt(request.getParameter("prazo")));
-            
             
             if(applicationClasse.alterar(c) == 0){
                 response.sendRedirect("view/consultarClasse.jsp?erro=0");
@@ -65,14 +63,12 @@ public class ctrlCadastrarClasse extends HttpServlet {
             }
 		}else if(operacao.equals("excluirClasse")){
 			Classe c =  applicationClasse.getId(request.getParameter("idClasse"));
-			 if(applicationClasse.excluir(c) == 0){
-	                response.sendRedirect("view/consultarClasse.jsp?erro=0");
-	            }else{
-	                response.sendRedirect("view/consultarClasse.jsp?erro=-1");
-	            }
-			
-			String redirectUrl = "../view/consultarClasse.jsp";
-			response.sendRedirect(redirectUrl);
+			 
+			if(applicationClasse.excluir(c) == 0){
+				response.sendRedirect("view/consultarClasse.jsp?erro=0");
+			}else{
+				response.sendRedirect("view/consultarClasse.jsp?erro=-1");
+			}
 		}
 	}
 

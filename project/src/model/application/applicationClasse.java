@@ -93,8 +93,7 @@ public class applicationClasse {
             t.commit();
             
             session.close();
-            
-            System.out.println("EXCLUÍDO!!!!!");
+
         } catch (Exception erro) {
             return -1;
         }
