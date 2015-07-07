@@ -3,10 +3,12 @@ package model.application;
 import java.util.List;
 
 import model.domain.TipoItem;
+import model.domain.TipoItem;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.cfg.AnnotationConfiguration;
 
 public class applicationTipoItem {
@@ -61,4 +63,39 @@ public class applicationTipoItem {
 		
 		return tipos;
 	}
+	
+	public static int alterar(TipoItem a){
+        try{
+            SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
+            Session session = sessions.openSession();
+            
+            Transaction t = session.beginTransaction();
+            session.update(a);
+            t.commit();
+            
+            session.close();
+            
+        } catch (Exception erro) {
+            return -1;
+        }
+        return 0;
+    }
+    
+    public static int excluir(TipoItem a){
+        try{
+            SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
+            Session session = sessions.openSession();
+            
+            Transaction t = session.beginTransaction();
+            session.delete(a);
+            t.commit();
+            
+            session.close();
+            
+        } catch (Exception erro) {
+            return -1;
+        }
+        return 0;
+    }
+    
 }
