@@ -5,37 +5,32 @@
 	<div class="jumbotrom">
 		<div class="container">
 
-			<h1><span class="fa fa fa-truck"></span> Alterar Distribuidor</h1>
+			<h1><span class="fa fa-list-ol"></span> Excluir Ator</h1>
 		
 		</div>
 	</div><!--fim jumbotrom-->
 	
 	<div class="container">
-				<form action="../ctrlCadastrarDistribuidor" method="POST">
+				<form action="../ctrlCadastrarAtor" method="POST">
 					<div class="row">
 						<fieldset class="col-md-12">
-							<legend>Dados classe</legend>
+							<legend>Dados Ator</legend>
 						</fieldset>
+						<p> ID: ${param.id}</p>
 						<fieldset class="col-md-6">
 							<div class="form-group">
-								<input type="hidden" name="operacao" value="alterar">
-								<label for="razao">Razão social</label>
-								<input type="text" class="form-control" id="razao" name="razao" value="${param.razao}" autofocus>	
-							</div>
-
-							<div class="form-group">
-								<div class="input-group">
-								<label for="cnpj"> CNPJ</label>
-								<input type="text" class="form-control" id="cnpj" name="cnpj"  value="${param.cnpj}"
-										placeholder="00.000.000/0000-00">
-								</div>
+								<input type="hidden" name="id" value="${param.id}">
+								<input type="hidden" name="operacao" value="excluir">
+								<label for="nome">Nome</label>
+								<input type="text" class="form-control" id="nome" name="nome" value="${param.nome}" autofocus readonly="readonly">	
 							</div>
 
 						</fieldset>	<!--fim fieldset-->
 					</div><!--fim row-->
+					
 					<button type="submit" class="btn btn-primary btn-lg pull-left">
-						<span class="fa fa-refresh"></span>
-						Alterar
+						<span class="fa fa-trash-o"></span>
+						Excluir
 					</button>
 					<a href="../index.jsp">
 						<button type="button" class="btn btn-danger btn-lg pull-left">

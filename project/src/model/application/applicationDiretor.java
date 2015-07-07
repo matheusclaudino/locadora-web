@@ -4,6 +4,7 @@ import java.util.List;
 
 import model.domain.Categoria;
 import model.domain.Diretor;
+import model.domain.Item;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -48,4 +49,19 @@ public class applicationDiretor {
 		
 		return diretores;
 	}
+	
+	public static Diretor getDiretor(String id) {
+        SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
+        Session session = sessions.openSession();
+
+        String q = "FROM Diretor WHERE id = " + id;
+        
+        session.beginTransaction();
+        Query qry = session.createQuery(q);
+        Diretor d = (Diretor)qry.uniqueResult();
+        
+        session.close();
+
+        return d;
+    }
 }

@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import model.application.applicationAtor;
+import model.domain.Ator;
 
 /**
  * Servlet implementation class ctrlCadastrarAtor
@@ -41,11 +42,29 @@ public class ctrlCadastrarAtor extends HttpServlet {
 		if(operacao.equals("inscreverNovoAtor")){
 			String nome = request.getParameter("nome");
 			if(applicationAtor.inscreverNovoAtor(nome) == applicationAtor.INSCREVER_NOVO_ATOR_OK){
-				
+				 response.sendRedirect("view/consultarAtor.jsp?erro=0");
 			}else{
-				
+                response.sendRedirect("view/consultarAtor.jsp?erro=-1");
 			}
-		}
+		}else if (operacao.equals("alterar")) {
+			Ator a =  applicationAtor.getAtor(request.getParameter("id"));
+            a.setNome(request.getParameter("nome"));
+
+            if(applicationAtor.alterar(a) == 0){
+                response.sendRedirect("view/consultarAtor.jsp?erro=0");
+            }else{
+                response.sendRedirect("view/consultarAtor.jsp?erro=-1");
+            }
+
+        } else if (operacao.equals("excluir")) {
+            Ator a =  applicationAtor.getAtor(request.getParameter("id"));
+
+            if(applicationAtor.excluir(a) == 0){
+                response.sendRedirect("view/consultarAtor.jsp?erro=0");
+            }else{
+                response.sendRedirect("view/consultarAtor.jsp?erro=-1");
+            }
+        }
 		
 	}
 

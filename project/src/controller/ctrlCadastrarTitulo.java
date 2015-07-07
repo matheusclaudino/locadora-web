@@ -2,6 +2,7 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Enumeration;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -11,12 +12,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.application.applicationAtor;
+import model.application.applicationCategoria;
+import model.application.applicationClasse;
+import model.application.applicationDiretor;
+import model.application.applicationDistribuidor;
 import model.application.applicationTitulo;
 import model.domain.Ator;
 import model.domain.Categoria;
 import model.domain.Classe;
 import model.domain.Diretor;
 import model.domain.Distribuidor;
+import model.domain.Titulo;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -65,19 +72,10 @@ public class ctrlCadastrarTitulo extends HttpServlet {
 			String atores[] = request.getParameterValues("selecao-ator");
 			Set<Ator> ator = new HashSet<Ator>();
 			
-			SessionFactory  sessions = new AnnotationConfiguration().configure().buildSessionFactory();
 			//Pegando todos os atores selecionados no checkbox no banco
 				for(String s: atores){
-					Session session = sessions.openSession();
-					int id = Integer.parseInt(s.toString());
-					
-					String strQuery = "FROM Ator WHERE id = " + id;
-					session.beginTransaction();
-					Query qr = session.createQuery(strQuery);
-					Ator a = (Ator)qr.uniqueResult();
-					
+					Ator a = applicationAtor.getAtor(s.toString());
 					ator.add(a);
-					session.close();
 				}
 			
 			SessionFactory s = new AnnotationConfiguration().configure().buildSessionFactory();
@@ -107,11 +105,45 @@ public class ctrlCadastrarTitulo extends HttpServlet {
 				
 			}
 			
+		}else if (operacao.equals("alterar")) {
+            Titulo t =  applicationTitulo.getTitulo(Integer.parseInt(request.getParameter("id")));
+            t.setNome(request.getParameter("nome"));
+            t.setAno(request.getParameter("ano"));
+            t.setSinopse(request.getParameter("sinopse"));
+
+            t.setCategoria(applicationCategoria.getCategoria(request.getParameter("categoria")));
+            t.setDistribuidor(applicationDistribuidor.getCnpj(request.getParameter("distribuidor")));
+            t.setClasse(applicationClasse.getId(request.getParameter("classe")));
+            t.setDiretor(applicationDiretor.getDiretor(request.getParameter("diretor")));
+
+          /*  String atores[] = request.getParameterValues("selecao-ator");
+			Set<Ator> ator = new HashSet<Ator>();
 			
+			for(String s: atores){
+				Ator a = applicationAtor.getAtor(s.toString());
+				ator.add(a);
+			}
 			
-		}else{
-			
-		}
+            t.setAtores(ator);*/
+            t.setAtores(t.getAtores());
+
+            if(applicationTitulo.alterar(t) == 0){
+                response.sendRedirect("view/consultarTitulo.jsp?erro=0");
+            }else{
+                response.sendRedirect("view/consultarTitulo.jsp?erro=-1");
+            }
+
+        } else if (operacao.equals("excluir")) {
+            Titulo t =  applicationTitulo.getTitulo(Integer.parseInt(request.getParameter("id")));
+            System.out.println("Título: " + t);
+            if(applicationTitulo.excluir(t) == 0){
+                response.sendRedirect("view/consultarTitulo.jsp?erro=0");
+            }else{
+                response.sendRedirect("view/consultarTitulo.jsp?erro=-1");
+            }
+        } else {
+            System.out.println("Operacao invalida");
+        }
 	}
 
 }

@@ -13,6 +13,7 @@ import model.domain.Titulo;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.cfg.AnnotationConfiguration;
 
 public class applicationTitulo {
@@ -73,4 +74,36 @@ public class applicationTitulo {
 		
 		return titulos;
 	}
+	
+	public static int alterar(Titulo ti){
+        try{
+            SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
+            Session session = sessions.openSession();
+            
+            Transaction t = session.beginTransaction();
+            session.update(ti);
+            t.commit();
+            
+            session.close();
+        } catch (Exception erro) {
+            return -1;
+        }
+        return 0;
+    }
+    
+    public static int excluir(Titulo ti){
+        try{
+            SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
+            Session session = sessions.openSession();
+            
+            Transaction t = session.beginTransaction();
+            session.delete(ti);
+            t.commit();
+            
+            session.close();
+        } catch (Exception erro) {
+            return -1;
+        }
+        return 0;
+    }
 }

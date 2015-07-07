@@ -3,6 +3,7 @@ package model.application;
 import java.util.List;
 
 import model.domain.Categoria;
+import model.domain.Diretor;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -46,4 +47,19 @@ public class applicationCategoria {
 		
 		return categorias;
 	}
+	
+	public static Categoria getCategoria(String id) {
+        SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
+        Session session = sessions.openSession();
+
+        String q = "FROM Categoria WHERE id = " + id;
+        
+        session.beginTransaction();
+        Query qry = session.createQuery(q);
+        Categoria c = (Categoria)qry.uniqueResult();
+        
+        session.close();
+
+        return c;
+    }
 }
