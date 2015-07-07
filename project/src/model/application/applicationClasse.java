@@ -63,6 +63,7 @@ public class applicationClasse {
 	    
 	    session.close();
 
+
 	    return c;
 	}
 	public static int alterar(Classe c){
@@ -73,9 +74,28 @@ public class applicationClasse {
             Transaction t = session.beginTransaction();
             session.update(c);
             t.commit();
+            
+            session.close();
+
+        } catch (Exception erro) {
+            return -1;
+        }
+        return 0;
+    }
+	
+	public static int excluir(Classe c){
+        try{
+            SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
+            Session session = sessions.openSession();
+            
+            Transaction t = session.beginTransaction();
+            session.delete(c);
+            t.commit();
+            
             session.close();
             
-        } catch (Exception x) {
+            System.out.println("EXCLUÍDO!!!!!");
+        } catch (Exception erro) {
             return -1;
         }
         return 0;

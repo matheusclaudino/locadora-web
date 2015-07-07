@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import model.application.applicationClasse;
+import model.domain.Classe;
 
 /**
  * Servlet implementation class ctrlCadastrarClasse
@@ -47,6 +48,31 @@ public class ctrlCadastrarClasse extends HttpServlet {
 			}
 			
 			
+		}else if(operacao.equals("alterarClasse")){
+			//response.sendRedirect("http://localhost:8080/LocadoraProject/view/classe.jsp?retorno=0");
+			Classe c =  applicationClasse.getId(request.getParameter("idClasse"));
+		    out.println("<html><p>ID: " + c.getId()+ "</p></html>");
+			
+            c.setNome(request.getParameter("nome"));
+            c.setValor(Float.parseFloat(request.getParameter("valor-locacao")));
+            c.setPrazoDevolucao(Integer.parseInt(request.getParameter("prazo")));
+            
+            
+            if(applicationClasse.alterar(c) == 0){
+                response.sendRedirect("view/consultarClasse.jsp?erro=0");
+            }else{
+                response.sendRedirect("view/consultarClasse.jsp?erro=-1");
+            }
+		}else if(operacao.equals("excluirClasse")){
+			Classe c =  applicationClasse.getId(request.getParameter("idClasse"));
+			 if(applicationClasse.excluir(c) == 0){
+	                response.sendRedirect("view/consultarClasse.jsp?erro=0");
+	            }else{
+	                response.sendRedirect("view/consultarClasse.jsp?erro=-1");
+	            }
+			
+			String redirectUrl = "../view/consultarClasse.jsp";
+			response.sendRedirect(redirectUrl);
 		}
 	}
 

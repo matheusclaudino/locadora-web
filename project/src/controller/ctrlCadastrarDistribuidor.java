@@ -47,17 +47,13 @@ public class ctrlCadastrarDistribuidor extends HttpServlet {
 			String razao = request.getParameter("razao");
 			String redirectUrl;
 			
-			System.out.println("CADASTRO >>>>>> :"+applicationDistribuidor.inscreverNovoDistribuidor(Long.parseLong(cnpj), razao));
-			System.out.println("RETORNO >>>>>>:"+applicationDistribuidor.INSCREVER_NOVO_DISTRIBUIDOR_OK);
 			if(applicationDistribuidor.inscreverNovoDistribuidor(Long.parseLong(cnpj), razao) == applicationDistribuidor.INSCREVER_NOVO_DISTRIBUIDOR_OK){
 				//redirectUrl = "../view/distribuidor.jsp?retorno=1";
 				//response.sendRedirect("http://localhost:8080/LocadoraProject/view/distribuidor.jsp?retorno=1");
-				System.out.println(">>>>>>>>LINK: ");
 
 			}else{
 				//redirectUrl = "../view/distribuidor.jsp?retorno=0";
 				//response.sendRedirect("http://localhost:8080/LocadoraProject/view/distribuidor.jsp?retorno=0");
-				System.out.println(">>>>>>>>LINK AAAAA: ");
 			}
 			
 			

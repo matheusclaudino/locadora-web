@@ -19,6 +19,7 @@
 						<p> ID: ${param.id}</p>
 						<fieldset class="col-md-6">
 							<div class="form-group">
+								<input type="hidden" name="idClasse" value="${param.id}">
 								<input type="hidden" name="operacao" value="alterarClasse">
 								<label for="nome">Nome completo</label>
 								<input type="text" class="form-control" id="nome" name="nome" value="${param.nome}" autofocus>	

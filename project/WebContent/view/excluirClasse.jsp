@@ -1,18 +1,11 @@
 <%@include file="import/head.jsp" %>
 	
 <%@ include file="import/navbar.jsp"%>
-<script>
-	retorno = ${param.retorno}
-	if (retorno == 1)
-		alert('Distribuidora cadastrada');
-	else
-		alert('Erro no cadastro');
-</script>
 
 	<div class="jumbotrom">
 		<div class="container">
 
-			<h1><span class="fa fa-list-ol"></span> Incluir Classe</h1>
+			<h1><span class="fa fa-trash-o"></span> Excluir Classe</h1>
 		
 		</div>
 	</div><!--fim jumbotrom-->
@@ -23,12 +16,13 @@
 						<fieldset class="col-md-12">
 							<legend>Dados classe</legend>
 						</fieldset>
-						
+						<p> ID: ${param.id}</p>
 						<fieldset class="col-md-6">
 							<div class="form-group">
-								<input type="hidden" name="operacao" value="inscreverNovaClasse">
+								<input type="hidden" name="idClasse" value="${param.id}">
+								<input type="hidden" name="operacao" value="excluirClasse">
 								<label for="nome">Nome completo</label>
-								<input type="text" class="form-control" id="nome" name="nome" autofocus>	
+								<input type="text" class="form-control" id="nome" name="nome" value="${param.nome}" readonly="readonly">	
 							</div>
 
 							<div class="form-group">
@@ -36,21 +30,21 @@
 								
 								<div class="input-group">
 									<span class="input-group-addon">R$</span>
-									<input type="text" class="form-control" id="valor-locacao" name="valor-locacao" 
+									<input type="text" class="form-control" id="valor-locacao" name="valor-locacao" value="${param.valor}" readonly="readonly" 
 										placeholder="00.00">
 								</div>
 							</div>
 
 							<div class="form-group">
 								<label for="prazo">Prazo devolução</label>
-								<input type="text" class="form-control" id="prazo" name="prazo" 
+								<input type="text" class="form-control" id="prazo" name="prazo" value="${param.prazo}"  readonly="readonly"
 									placeholder="Dias">
 							</div>
 						</fieldset>	<!--fim fieldset-->
 					</div><!--fim row-->
 					<button type="submit" class="btn btn-primary btn-lg pull-left">
 						<span class="glyphicon glyphicon-floppy-disk"></span>
-						Salvar
+						Excluir
 					</button>
 					<a href="../index.jsp">
 						<button type="button" class="btn btn-danger btn-lg pull-left">

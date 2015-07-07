@@ -5,9 +5,11 @@
 	<%@page import="model.application.applicationClasse"%>
 	<%@page import="model.domain.Classe"%>
 	<%@page import="java.util.List"%>>
+<%@ include file="import/erro.jsp"%>
 <%
 	List<Classe> classes = applicationClasse.getClasses();
-%>
+
+ %>
 	<div class="jumbotrom">
 		<div class="container">
 
@@ -58,7 +60,7 @@
 													+ "<td>" + c.getValor() + "</td>"
 													+ "<td>" + c.getPrazoDevolucao() + "</td>"
 													+ "<td ><a href=\"alterarClasse.jsp?id="+ c.getId() +"&nome="+c.getNome()+"&valor="+c.getValor()+"&prazo="+c.getPrazoDevolucao()+"\"><span class=\"btn btn-primary glyphicon glyphicon-refresh\"></span></a></td>"
-													+ "<td><span class=\"btn btn-danger glyphicon glyphicon-trash\"></span></td>"
+													+ "<td><a href=\"excluirClasse.jsp?id="+ c.getId() +"&nome="+c.getNome()+"&valor="+c.getValor()+"&prazo="+c.getPrazoDevolucao()+"\"><span class=\"btn btn-danger glyphicon glyphicon-trash\"></a></span></td>"
 											+ "</tr>");
 									//agenda/atualiza-contato.jsp?id=${contato.id}&nome=${contato.nome}&endereco=${contato.endereco}&email=${contato.email}&data=${contato.data}
 								}
