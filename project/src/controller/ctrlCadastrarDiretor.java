@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import model.application.applicationDiretor;
+import model.domain.Diretor;
 
 /**
  * Servlet implementation class ctrlCadastrarDiretor
@@ -42,13 +43,30 @@ public class ctrlCadastrarDiretor extends HttpServlet {
 			String nome = request.getParameter("nome");
 			
 			if(applicationDiretor.inscreverNovoDiretor(nome) ==  applicationDiretor.INSCREVER_NOVO_DIRETOR_OK){
-				
-			}else{
-				
-			}
-		}else{
-			
-		}
+			    response.sendRedirect("view/consultarDiretor.jsp?erro=0");
+            }else{
+                response.sendRedirect("view/consultarDiretor.jsp?erro=-1");
+            }
+		}else if (operacao.equals("alterar")) {
+			Diretor a =  applicationDiretor.getDiretor(request.getParameter("id"));
+            a.setNome(request.getParameter("nome"));
+
+            if(applicationDiretor.alterar(a) == 0){
+                response.sendRedirect("view/consultarDiretor.jsp?erro=0");
+            }else{
+                response.sendRedirect("view/consultarDiretor.jsp?erro=-1");
+            }
+
+        } else if (operacao.equals("excluir")) {
+            Diretor a =  applicationDiretor.getDiretor(request.getParameter("id"));
+
+            if(applicationDiretor.excluir(a) == 0){
+                response.sendRedirect("view/consultarDiretor.jsp?erro=0");
+            }else{
+                response.sendRedirect("view/consultarDiretor.jsp?erro=-1");
+            }
+        }
+		
 	}
 
 }

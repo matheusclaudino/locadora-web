@@ -2,6 +2,7 @@ package model.application;
 
 import java.util.List;
 
+import model.domain.Ator;
 import model.domain.Categoria;
 import model.domain.Diretor;
 import model.domain.Item;
@@ -9,6 +10,7 @@ import model.domain.Item;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.cfg.AnnotationConfiguration;
 
 public class applicationDiretor {
@@ -64,4 +66,39 @@ public class applicationDiretor {
 
         return d;
     }
+	
+	public static int alterar(Diretor d){
+        try{
+            SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
+            Session session = sessions.openSession();
+            
+            Transaction t = session.beginTransaction();
+            session.update(d);
+            t.commit();
+            
+            session.close();
+            
+        } catch (Exception erro) {
+            return -1;
+        }
+        return 0;
+    }
+    
+    public static int excluir(Diretor d){
+        try{
+            SessionFactory sessions = new AnnotationConfiguration().configure().buildSessionFactory();
+            Session session = sessions.openSession();
+            
+            Transaction t = session.beginTransaction();
+            session.delete(d);
+            t.commit();
+            
+            session.close();
+            
+        } catch (Exception erro) {
+            return -1;
+        }
+        return 0;
+    }
+    
 }
