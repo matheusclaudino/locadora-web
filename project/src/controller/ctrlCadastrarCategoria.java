@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import model.application.applicationCategoria;
-import model.application.applicationDiretor;
+import model.domain.Categoria;
 
 /**
  * Servlet implementation class ctrlCadastrarCategoria
@@ -43,13 +43,29 @@ public class ctrlCadastrarCategoria extends HttpServlet {
 			String nome = request.getParameter("nome");
 			
 			if(applicationCategoria.inscreverNovaCategoria(nome) ==  applicationCategoria.INSCREVER_NOVA_CATEGORIA_OK){
-				
-			}else{
-				
-			}
-		}else{
-			
-		}
+				response.sendRedirect("view/consultarCategoria.jsp?erro=0");
+            }else{
+                response.sendRedirect("view/consultarCategoria.jsp?erro=-1");
+            }
+		}else if (operacao.equals("alterar")) {
+			Categoria c =  applicationCategoria.getCategoria(request.getParameter("id"));
+            c.setNome(request.getParameter("nome"));
+
+            if(applicationCategoria.alterar(c) == 0){
+                response.sendRedirect("view/consultarCategoria.jsp?erro=0");
+            }else{
+                response.sendRedirect("view/consultarCategoria.jsp?erro=-1");
+            }
+
+        } else if (operacao.equals("excluir")) {
+        	Categoria c =  applicationCategoria.getCategoria(request.getParameter("id"));
+
+            if(applicationCategoria.excluir(c) == 0){
+                response.sendRedirect("view/consultarCategoria.jsp?erro=0");
+            }else{
+                response.sendRedirect("view/consultarCategoria.jsp?erro=-1");
+            }
+        }
 		
 	}
 
