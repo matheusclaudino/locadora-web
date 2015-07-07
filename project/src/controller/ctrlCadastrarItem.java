@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import model.application.applicationItem;
+import model.application.applicationTipoItem;
+import model.application.applicationTitulo;
+import model.domain.Item;
 import model.domain.TipoItem;
 import model.domain.Titulo;
 
@@ -73,7 +76,32 @@ public class ctrlCadastrarItem extends HttpServlet {
 			}else{
 				
 			}
-		}
+		}else if (operacao.equals("alterar")) {
+			
+            Item i =  applicationItem.getItem(request.getParameter("id"));
+            Titulo t = applicationTitulo.getTitulo(Integer.parseInt(request.getParameter("titulo")));
+            TipoItem ti = applicationTipoItem.getTipoItem(Integer.parseInt(request.getParameter("tipo")));
+
+            i.setTitulo(t);
+            i.setTipoItem(ti);
+            i.setNumeroSerie(Integer.parseInt(request.getParameter("numero")));
+
+            if(applicationItem.alterar(i) == 0){
+                response.sendRedirect("view/consultarItem.jsp?erro=0");
+            }else{
+                response.sendRedirect("view/consultarItem.jsp?erro=-1");
+            }
+
+        } else if (operacao.equals("excluir")) {
+            
+            Item i =  applicationItem.getItem(request.getParameter("id"));
+
+            if(applicationItem.excluir(i) == 0){
+                response.sendRedirect("view/consultarItem.jsp?erro=0");
+            }else{
+                response.sendRedirect("view/consultarItem.jsp?erro=-1");
+            }
+        }
 	}
 
 }
